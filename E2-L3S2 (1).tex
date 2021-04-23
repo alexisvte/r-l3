@@ -1,0 +1,2819 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  11pt,
+  french,
+]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={E2-L3S2 Le prix des logements dans l'État de Washington aux États-Unis},
+  pdfauthor={Lola LUBIN et Alexis VIALATTE},
+  pdflang={fr},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[a4paper, top = 2cm, bottom = 2cm, left = 1.5cm, right = 1.5cm]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\usepackage{tikz}
+\usepackage{dcolumn}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\ifxetex
+  % Load polyglossia as late as possible: uses bidi with RTL langages (e.g. Hebrew, Arabic)
+  \usepackage{polyglossia}
+  \setmainlanguage[]{french}
+\else
+  \usepackage[shorthands=off,main=french]{babel}
+\fi
+
+\title{\texttt{E2-L3S2} Le prix des logements dans l'État de Washington aux
+États-Unis}
+\author{Lola LUBIN et Alexis VIALATTE}
+\date{2021}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+\newpage
+
+\hypertarget{formalisation}{%
+\section{Formalisation}\label{formalisation}}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Nous posons \(x_{i,k}\) le \(i\text{-ième}\) logement et la
+\(k\text{-ième}\) variable avec \(i \in [1,\ldots,I]\) et
+\(k \in [1,\ldots,K]\) ainsi que \(\mathcal{M}_{j}\) le
+\(j\text{-ième}\) modèle avec \(j \in [1,\ldots,J]\) et
+\(\mathcal{A}_{n}\) la \(n\text{-ième}\) analyse avec
+\(n \in [1,\ldots,N]\). Nous aurons \(\forall j \in [1,\ldots,J]\) et
+\(\forall n \in [1,\ldots,N]\) :
+\[\mathcal{A}_{n}=\{\mathcal{M}_{1},\ldots,\mathcal{M}_{J}\}\]
+
+Nous poserons la variable expliquée \(y_{i}=x_{i,\tilde{k}}\) où
+\(\tilde{k} \in [1,\ldots,K]\), les variables explicatives \(x_{i,k}\)
+où \(k \in [1,\ldots,K]\ \setminus\ \tilde{k}\) et la variable
+résiduelle \(z_{i}\). Nous aurons : \begin{equation}
+  \mathcal{M}_{j}:y_{i}=\alpha+\underset{k=1}{\overset{K}{\sum}}(\beta_{k}x_{i,k})+z_{i}
+\end{equation}
+
+Nous minimiserons la somme des résidus au carré. Nous aurons :
+\begin{equation}
+  \mathcal{M}_{j}:\text{min}\Bigg{(}\underset{i=1}{\overset{I}{\sum}}z_{i}^{2}\Bigg{)}=\text{min}\Bigg\{\underset{i=1}{\overset{I}{\sum}}\Big{[}y_{i}-\alpha-\underset{k=1}{\overset{K}{\sum}}(\beta_{k}x_{i,k})\Big{]}^{2}\Bigg\}
+\end{equation}
+
+Nous chercherons à estimer \(\hat{\alpha}\), la constante du
+\(j\text{-ième}\) modèle et \(\hat{\beta_{k}}\), le coefficient de la
+\(k\text{-ième}\) variable du \(j\text{-ième}\) modèle.
+
+Nous poserons \(\phi\) le risque de première espèce, \(t\) la
+statistique du test de Students, \(F\) la statistique du test de Fisher,
+\(DW\) la statistique du test de Durbin-Watson, \(W\) la statistique du
+test de Shapiro-Wilk, \(BP\) la statistique du test de Breusch-Pagan et
+\(HMC\) la statistique du test d'Harrison-McCabe. Nous aurons :
+
+\[\begin{array}{c}
+\mathcal{H}_{0}:\alpha=0 \iff p\text{-}value \geqslant \phi\\
+\mathcal{H}_{1}:\alpha\not=0 \iff p\text{-}value < \phi
+\end{array}\]
+
+\[\begin{array}{c}
+\mathcal{H}_{0}:\beta_{k}=0 \iff p\text{-}value \geqslant \phi\\
+\mathcal{H}_{1}:\beta_{k}\not=0 \iff p\text{-}value < \phi
+\end{array}\]
+
+\[\begin{array}{c}
+\mathcal{H}_{0}:\text{absence de significativité} \iff p\text{-}value \geqslant \phi\\
+\mathcal{H}_{1}:\text{significativité} \iff p\text{-}value < \phi
+\end{array}\]
+
+\[\begin{array}{c}
+\mathcal{H}_{0}:\text{absence d'autocorrélation} \iff p\text{-}value \geqslant \phi\\
+\mathcal{H}_{1}:\text{autocorrélation} \iff p\text{-}value < \phi
+\end{array}\]
+
+\[\begin{array}{c}
+\mathcal{H}_{0}:\text{distribution normale} \iff p\text{-}value \geqslant \phi\\
+\mathcal{H}_{1}:\text{absence de distribution normale} \iff p\text{-}value < \phi
+\end{array}\]
+
+\[\begin{array}{c}
+\mathcal{H}_{0}:\text{homoscédasticité} \iff p\text{-}value \geqslant \phi\\
+\mathcal{H}_{1}:\text{hétéroscédasticité} \iff p\text{-}value < \phi
+\end{array}\]
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\newpage
+
+\hypertarget{la-base-de-donnuxe9es-bdd_data.csv}{%
+\section{\texorpdfstring{La base de données
+\texttt{BDD\_data.csv}}{La base de données BDD\_data.csv}}\label{la-base-de-donnuxe9es-bdd_data.csv}}
+
+\[\forall n \in [1,\ldots,N], \forall j \in [1,\ldots,J] \iff \tilde{k}=3\]
+
+Nous allons commencer par nous poser une question : quelles sont les
+variables qui expliquent le prix des logements dans l'État de Washington
+aux États-Unis ?
+
+\begin{table}[!htbp] \centering 
+  \caption{Résumé de la variable price :} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}} ccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+Moyenne & Ecart-type & Minimum & Q1 & Q2 & Q3 & Maximum \\ 
+\hline \\[-1.8ex] 
+$540,088.100$ & $367,127.200$ & $75,000$ & $321,950$ & $450,000$ & $645,000$ & $7,700,000$ \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table}
+
+Pour répondre à cette question, nous disposons d'une base de données
+\texttt{BDD\_data.csv} contenant 21613 logements et 21 variables. Il y a
+0 donnée manquante concernant 0 logement. Les variables sont :
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  id,
+\item
+  date,
+\item
+  price,
+\item
+  bedrooms,
+\item
+  bathrooms,
+\item
+  sqft\_living,
+\item
+  sqft\_lot,
+\item
+  floors,
+\item
+  waterfront,
+\item
+  view,
+\item
+  condition,
+\item
+  grade,
+\item
+  sqft\_above,
+\item
+  sqft\_basement,
+\item
+  yr\_built,
+\item
+  yr\_renovated,
+\item
+  zipcode,
+\item
+  lat,
+\item
+  long,
+\item
+  sqft\_living15,
+\item
+  sqft\_lot15.
+\end{enumerate}
+
+Pour chaque logement, la variable \texttt{ìd} correspond à son index, la
+variable \texttt{date} correspond à son année de vente, la variable
+\texttt{price} correspond à son prix de vente, la variable
+\texttt{bedrooms} correspond à son nombre de chambres, la variable
+\texttt{bathrooms} correspond à son nombre de salles de bain, la
+variable \texttt{sqft\_living} correspond à sa surface intérieure en
+pieds carrés, la variable \texttt{sqft\_lot} correspond à sa surface
+totale en pieds carrés, la variable \texttt{floors} correspond à son
+nombre d'étages, la variable \texttt{waterfront} répond à s'il a une vue
+sur la mer ou non, la variable \texttt{view} correspond à son point de
+vue, la variable \texttt{condition} correspond à son état, la variable
+\texttt{grade} correspond à son \textit{design}, la variable
+\texttt{sqft\_above} correspond à sa surface intérieure en pieds carrés
+moins son sous-sol, la variable \texttt{sqft\_basement} correspond à sa
+surface intérieure en pieds carrés dans son sous-sol, la variable
+\texttt{yr\_built} correspond à son année de construction, la variable
+\texttt{yr\_renovated} correspond à son année de rénovation s'il a été
+rénové, la variable \texttt{zipcode} correspond à son code postal, les
+variables \texttt{lat} et \texttt{long} correspondent à ses coordonnées
+géographiques et les variables \texttt{sqft\_living15} et
+\texttt{sqft\_lot15} correspondent à sa surface intérieure et à sa
+surface totale en 2015.
+
+\newpage
+
+\hypertarget{les-manipulations-de-la-base-de-donnuxe9es}{%
+\subsection{Les manipulations de la base de
+données}\label{les-manipulations-de-la-base-de-donnuxe9es}}
+
+Nous avons discuté de la base de données et nous ne pensons pas
+conserver toutes les variables principalement pour des raisons
+techniques. Nous allons regarder chaque variable de la base de données
+et nous allons choisir de la conserver, de la transformer ou de la
+supprimer.
+
+\hypertarget{les-variables-id-et-date}{%
+\subsubsection{\texorpdfstring{Les variables \texttt{id} et
+\texttt{date}}{Les variables id et date}}\label{les-variables-id-et-date}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{data}\OperatorTok{$}\NormalTok{date <-}\StringTok{ }\KeywordTok{as.character}\NormalTok{( data}\OperatorTok{$}\NormalTok{date )}
+
+\NormalTok{data}\OperatorTok{$}\NormalTok{date <-}\StringTok{ }\KeywordTok{str_sub}\NormalTok{( data}\OperatorTok{$}\NormalTok{date,}
+                      \DecValTok{1}\NormalTok{,}
+                      \DecValTok{4}\NormalTok{ )}
+
+\NormalTok{data}\OperatorTok{$}\NormalTok{date <-}\StringTok{ }\KeywordTok{as.numeric}\NormalTok{( data}\OperatorTok{$}\NormalTok{date )}
+\end{Highlighting}
+\end{Shaded}
+
+La variable \texttt{id} n'est pas intéressante à analyser. Nous nous
+sommes demandés si, pour chaque logement, la date de la vente avait une
+influence sur le prix de ces derniers. \textit{A priori}, nous supposons
+que non. Nous ne nous servirons donc pas des variables \texttt{id} et
+\texttt{date} car le graphique ci-dessous ne va pas à l'encontre de
+notre avis.
+
+\begin{center}\includegraphics{E2-L3S2--1-_files/figure-latex/data.figure1-1} \end{center}
+
+\newpage
+
+\hypertarget{les-variables-sqft_living-et-sqft_lot}{%
+\subsubsection{\texorpdfstring{Les variables \texttt{sqft\_living} et
+\texttt{sqft\_lot}}{Les variables sqft\_living et sqft\_lot}}\label{les-variables-sqft_living-et-sqft_lot}}
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-2}Résumé des variables price, sqft-living et sqft-garden :}
+\centering
+\begin{tabular}[t]{lrrr}
+\toprule
+  & price & sqft\_living & sqft\_lot\\
+\midrule
+\cellcolor{gray!6}{Moyenne} & \cellcolor{gray!6}{540088.1} & \cellcolor{gray!6}{2079.900} & \cellcolor{gray!6}{15106.97}\\
+Ecart-type & 367127.2 & 918.441 & 41420.51\\
+\cellcolor{gray!6}{Minimum} & \cellcolor{gray!6}{75000.0} & \cellcolor{gray!6}{290.000} & \cellcolor{gray!6}{520.00}\\
+Q1 & 321950.0 & 1427.000 & 5040.00\\
+\cellcolor{gray!6}{Q2} & \cellcolor{gray!6}{450000.0} & \cellcolor{gray!6}{1910.000} & \cellcolor{gray!6}{7618.00}\\
+\addlinespace
+Q3 & 645000.0 & 2550.000 & 10688.00\\
+\cellcolor{gray!6}{Maximum} & \cellcolor{gray!6}{7700000.0} & \cellcolor{gray!6}{13540.000} & \cellcolor{gray!6}{1651359.00}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Nous nous sommes demandés si, pour chaque logement, la surface
+intérieure en pieds carrés avait une influence plus ou moins importante
+que la surface extérieure en pieds carrés sur le prix de ces derniers.
+\textit{A priori}, nous supposons que oui car un pied carré intérieur
+est plus important qu'un pied carré extérieur. Nous nous servirons donc
+des variables \texttt{sqft\_living} et \texttt{sqft\_lot} car les
+graphiques ci-dessous ne vont pas à l'encontre de notre avis.
+
+\begin{center}\includegraphics{E2-L3S2--1-_files/figure-latex/data.figure2-1} \end{center}
+
+\newpage
+
+\hypertarget{les-variables-bedrooms-bathrooms-et-floors}{%
+\subsubsection{\texorpdfstring{Les variables \texttt{bedrooms},
+\texttt{bathrooms} et
+\texttt{floors}}{Les variables bedrooms, bathrooms et floors}}\label{les-variables-bedrooms-bathrooms-et-floors}}
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-3}Résumé des variables bedrooms, bathrooms et floors :}
+\centering
+\begin{tabular}[t]{lrrr}
+\toprule
+  & bedrooms & bathrooms & floors\\
+\midrule
+\cellcolor{gray!6}{Moyenne} & \cellcolor{gray!6}{3.371} & \cellcolor{gray!6}{2.115} & \cellcolor{gray!6}{1.494}\\
+Ecart-type & 0.930 & 0.770 & 0.540\\
+\cellcolor{gray!6}{Minimum} & \cellcolor{gray!6}{0.000} & \cellcolor{gray!6}{0.000} & \cellcolor{gray!6}{1.000}\\
+Q1 & 3.000 & 1.750 & 1.000\\
+\cellcolor{gray!6}{Q2} & \cellcolor{gray!6}{3.000} & \cellcolor{gray!6}{2.250} & \cellcolor{gray!6}{1.500}\\
+\addlinespace
+Q3 & 4.000 & 2.500 & 2.000\\
+\cellcolor{gray!6}{Maximum} & \cellcolor{gray!6}{33.000} & \cellcolor{gray!6}{8.000} & \cellcolor{gray!6}{3.500}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Nous nous sommes demandés si, pour chaque logement, le nombre de
+chambres, le nombre de salles de bain et le nombre d'étages avaient une
+influence sur le prix de ces derniers. \textit{A priori}, nous supposons
+que oui car plus le nombre de chambres, le nombre de salles de bain et
+le nombre d'étages sont élevés et plus la surface intérieure en pieds
+carrés est élévée. Nous nous servirons donc des variables
+\texttt{bedrooms}, \texttt{bathrooms} et \texttt{floors} car les
+graphiques ci-dessous ne vont pas à l'encontre de notre avis.
+
+\begin{center}\includegraphics{E2-L3S2--1-_files/figure-latex/data.figure3-1} \end{center}
+
+\newpage
+
+\hypertarget{les-variables-sqft_above-et-sqft_basement}{%
+\subsubsection{\texorpdfstring{Les variables \texttt{sqft\_above} et
+\texttt{sqft\_basement}}{Les variables sqft\_above et sqft\_basement}}\label{les-variables-sqft_above-et-sqft_basement}}
+
+Les variables \texttt{sqft\_built}, \texttt{sqft\_renovated},
+\texttt{sqft\_living15} et \texttt{sqft\_lot15} ne sont pas
+intéressantes à analyser car elles sont équivalentes des variables
+\texttt{yr\_built} et \texttt{yr\_renovated}.
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-4}Résumé des variables sqft-above et sqft-basement :}
+\centering
+\begin{tabular}[t]{lrr}
+\toprule
+  & sqft\_above & sqft\_basement\\
+\midrule
+\cellcolor{gray!6}{Moyenne} & \cellcolor{gray!6}{1788.391} & \cellcolor{gray!6}{291.509}\\
+Ecart-type & 828.091 & 442.575\\
+\cellcolor{gray!6}{Minimum} & \cellcolor{gray!6}{290.000} & \cellcolor{gray!6}{0.000}\\
+Q1 & 1190.000 & 0.000\\
+\cellcolor{gray!6}{Q2} & \cellcolor{gray!6}{1560.000} & \cellcolor{gray!6}{0.000}\\
+\addlinespace
+Q3 & 2210.000 & 560.000\\
+\cellcolor{gray!6}{Maximum} & \cellcolor{gray!6}{9410.000} & \cellcolor{gray!6}{4820.000}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Nous nous sommes demandés si, pour chaque logement, la surface
+intérieure en pieds carrés moins son sous-sol avait une influence plus
+ou moins importante que la surface intérieure en pieds carrés dans son
+sous-sol sur le prix de ces derniers. \textit{A priori}, nous supposons
+que oui car un pied carré intérieur est plus important qu'un pied carré
+intérieur dans son sous-sol. Les graphiques ci-dessous ne vont pas à
+l'encontre de notre avis. Néanmoins, nous ne nous servirons pas des
+variables \texttt{sqft\_above} et \texttt{sqft\_basement} car elles
+interagissent avec la variable \texttt{sqft\_living}.
+
+\begin{center}\includegraphics{E2-L3S2--1-_files/figure-latex/data.figure4-1} \end{center}
+
+\newpage
+
+\hypertarget{les-variables-yr_built-et-yr_renovated}{%
+\subsubsection{\texorpdfstring{Les variables \texttt{yr\_built} et
+\texttt{yr\_renovated}}{Les variables yr\_built et yr\_renovated}}\label{les-variables-yr_built-et-yr_renovated}}
+
+Les variables \texttt{yr\_built} et \texttt{yr\_renovated} ne sont pas
+intéressantes à analyser. Nous allons créer les variables
+\texttt{life\_built} et \texttt{life\_renovated} :
+
+\[\forall i \in [1,\ldots,I] \iff x_{i,23}=x_{i,2}-x_{i,15}\]
+\[\forall i \in [1,\ldots,I] \iff x_{i,24}=x_{i,2}-x_{i,16}\]
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{data}\OperatorTok{$}\NormalTok{life_built <-}\StringTok{ }\NormalTok{data}\OperatorTok{$}\NormalTok{date }\OperatorTok{-}\StringTok{ }\NormalTok{data}\OperatorTok{$}\NormalTok{yr_built[ data}\OperatorTok{$}\NormalTok{yr_built }\OperatorTok{!=}\StringTok{ }\DecValTok{0}\NormalTok{ ]}
+
+\NormalTok{data}\OperatorTok{$}\NormalTok{life_renovated <-}\StringTok{ }\NormalTok{data}\OperatorTok{$}\NormalTok{date }\OperatorTok{-}\StringTok{ }\NormalTok{data}\OperatorTok{$}\NormalTok{yr_renovated[ data}\OperatorTok{$}\NormalTok{yr_renovated }\OperatorTok{!=}\StringTok{ }\DecValTok{0}\NormalTok{ ]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-6}Résumé des variables life-built et life-renovated :}
+\centering
+\begin{tabular}[t]{lrr}
+\toprule
+  & life\_built & life\_renovated\\
+\midrule
+\cellcolor{gray!6}{Moyenne} & \cellcolor{gray!6}{43.318} & \cellcolor{gray!6}{18.492}\\
+Ecart-type & 29.375 & 15.511\\
+\cellcolor{gray!6}{Minimum} & \cellcolor{gray!6}{-1.000} & \cellcolor{gray!6}{-1.000}\\
+Q1 & 18.000 & 7.000\\
+\cellcolor{gray!6}{Q2} & \cellcolor{gray!6}{40.000} & \cellcolor{gray!6}{15.000}\\
+\addlinespace
+Q3 & 63.000 & 27.000\\
+\cellcolor{gray!6}{Maximum} & \cellcolor{gray!6}{115.000} & \cellcolor{gray!6}{81.000}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Nous nous sommes demandés si, pour chaque logement, l'âge de la
+construction et l'âge de la rénovation avaient une influence sur le prix
+de ces derniers. \textit{A priori}, nous supposons que oui car plus le
+logement est récent et plus le prix de ce dernier est élevé. Nous nous
+servirons des variables \texttt{life\_built} et \texttt{life\_renovated}
+même si les graphiques ci-dessous vont à l'encontre de notre avis.
+
+\begin{center}\includegraphics{E2-L3S2--1-_files/figure-latex/data.figure5-1} \end{center}
+
+\newpage
+
+\hypertarget{les-variables-waterfront-view-condition-et-grade}{%
+\subsubsection{\texorpdfstring{Les variables \texttt{waterfront},
+\texttt{view}, \texttt{condition} et
+\texttt{grade}}{Les variables waterfront, view, condition et grade}}\label{les-variables-waterfront-view-condition-et-grade}}
+
+Les variables \texttt{waterfront}, \texttt{view}, \texttt{condition} et
+\texttt{grade} sont des variables catégorielles :
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{data}\OperatorTok{$}\NormalTok{waterfront <-}\StringTok{ }\KeywordTok{as.factor}\NormalTok{( data}\OperatorTok{$}\NormalTok{waterfront )}
+
+\NormalTok{data}\OperatorTok{$}\NormalTok{view <-}\StringTok{ }\KeywordTok{as.factor}\NormalTok{( data}\OperatorTok{$}\NormalTok{view )}
+
+\NormalTok{data}\OperatorTok{$}\NormalTok{condition <-}\StringTok{ }\KeywordTok{as.factor}\NormalTok{( data}\OperatorTok{$}\NormalTok{condition )}
+
+\NormalTok{data}\OperatorTok{$}\NormalTok{grade <-}\StringTok{ }\KeywordTok{as.factor}\NormalTok{( data}\OperatorTok{$}\NormalTok{grade )}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-8}Résumé des variables waterfront, view, condition et grade :}
+\centering
+\begin{tabular}[t]{lrrrr}
+\toprule
+  & waterfront & view & condition & grade\\
+\midrule
+\cellcolor{gray!6}{Moyenne} & \cellcolor{gray!6}{1.008} & \cellcolor{gray!6}{1.234} & \cellcolor{gray!6}{3.409} & \cellcolor{gray!6}{6.657}\\
+Ecart-type & 0.087 & 0.766 & 0.651 & 1.175\\
+\cellcolor{gray!6}{Minimum} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{1.000}\\
+Q1 & 1.000 & 1.000 & 3.000 & 6.000\\
+\cellcolor{gray!6}{Q2} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{3.000} & \cellcolor{gray!6}{6.000}\\
+\addlinespace
+Q3 & 1.000 & 1.000 & 4.000 & 7.000\\
+\cellcolor{gray!6}{Maximum} & \cellcolor{gray!6}{2.000} & \cellcolor{gray!6}{5.000} & \cellcolor{gray!6}{5.000} & \cellcolor{gray!6}{12.000}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Nous nous sommes demandés si, pour chaque logement, la vue sur la mer ou
+non, le point de vue, l'état et le \textit{design} avaient une influence
+sur le prix de ces derniers. \textit{A priori}, nous supposons que oui
+car plus son point de vue est beau, plus l'état est bon, plus son
+\textit{design} est classe et plus le prix de ce dernier est élevé. Nous
+nous servirons des variables \texttt{waterfront}, \texttt{view},
+\texttt{condition} et \texttt{grade} même si les graphiques ci-dessous
+vont à l'encontre de notre avis.
+
+\begin{center}\includegraphics{E2-L3S2--1-_files/figure-latex/data.figure6-1} \end{center}
+
+\newpage
+
+\hypertarget{les-variables-zipcode-lat-et-long}{%
+\subsubsection{\texorpdfstring{Les variables \texttt{zipcode},
+\texttt{lat} et
+\texttt{long}}{Les variables zipcode, lat et long}}\label{les-variables-zipcode-lat-et-long}}
+
+Les variables \texttt{zipcode}, \texttt{lat} et \texttt{long} sont
+compliquées à analyser. Nous avons la variable \texttt{zipcode} qui est
+comprise entre 98001 et 98199 et les variables \texttt{lat} et
+\texttt{long} qui sont comprises, respectivement, entre 47.16 et 47.78
+et -122.52 et -121.32. La base de données \texttt{BDD\_data.csv}
+correspond grossièrement à la ville de Seattle dans l'État de Washington
+aux États-Unis.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.75\textwidth,height=\textheight]{image (2).png}
+\caption{Les États-Unis}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.75\textwidth,height=\textheight]{image (3).png}
+\caption{Zoom sur l'État de Washington}
+\end{figure}
+
+\newpage
+
+Est-ce qu'un logement à l'ouest coûte moins cher qu'un logement à l'est
+ou inversement ? Est-ce qu'un logement au nord coûte moins cher qu'un
+logement au sud ou inversement ? Nous n'avons aucun \textit{a priori}.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.875\textwidth,height=\textheight]{image (4).png}
+\caption{Zoom sur le nuage de points}
+\end{figure}
+
+D'après la carte ci dessus, nous supposons que plus un logement est au
+centre de Seattle et plus le prix de ce dernier est élevé. Nous allons
+zoomer sur le nuage de points le plus clair.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.75\textwidth,height=\textheight]{image (5).png}
+\caption{Zoom sur le centre de Seattle}
+\end{figure}
+
+Nous ne nous servirons pas des variables \texttt{zipcode}, \texttt{lat}
+et \texttt{long} car elles ne sont pas intéressantes à régresser
+linéairement.
+
+\newpage
+
+\hypertarget{la-nouvelle-base-de-donnuxe9es-bdd_data.csv}{%
+\section{\texorpdfstring{La nouvelle base de données
+\texttt{BDD\_data.csv}}{La nouvelle base de données BDD\_data.csv}}\label{la-nouvelle-base-de-donnuxe9es-bdd_data.csv}}
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-9}Aperçu de la base de la nouvelle base de données :}
+\centering
+\resizebox{\linewidth}{!}{
+\begin{tabular}[t]{lrrrrrrllllrr}
+\toprule
+  & price & bedrooms & bathrooms & sqft\_living & sqft\_lot & floors & waterfront & view & condition & grade & life\_built & life\_renovated\\
+\midrule
+\cellcolor{gray!6}{10609} & \cellcolor{gray!6}{367000} & \cellcolor{gray!6}{3} & \cellcolor{gray!6}{1.75} & \cellcolor{gray!6}{2000} & \cellcolor{gray!6}{12669} & \cellcolor{gray!6}{1} & \cellcolor{gray!6}{1} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{6} & \cellcolor{gray!6}{49} & \cellcolor{gray!6}{14}\\
+1204 & 510000 & 3 & 1.75 & 1490 & 3800 & 1 & 1 & 1 & 3 & 5 & 102 & 5\\
+\cellcolor{gray!6}{6262} & \cellcolor{gray!6}{848000} & \cellcolor{gray!6}{5} & \cellcolor{gray!6}{1.75} & \cellcolor{gray!6}{2290} & \cellcolor{gray!6}{4320} & \cellcolor{gray!6}{2} & \cellcolor{gray!6}{1} & \cellcolor{gray!6}{1} & \cellcolor{gray!6}{3} & \cellcolor{gray!6}{6} & \cellcolor{gray!6}{87} & \cellcolor{gray!6}{2}\\
+9621 & 473000 & 3 & 1.00 & 1280 & 10000 & 1 & 1 & 1 & 4 & 6 & 60 & 57\\
+\cellcolor{gray!6}{17361} & \cellcolor{gray!6}{840000} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{1.75} & \cellcolor{gray!6}{2330} & \cellcolor{gray!6}{4000} & \cellcolor{gray!6}{2} & \cellcolor{gray!6}{1} & \cellcolor{gray!6}{1} & \cellcolor{gray!6}{5} & \cellcolor{gray!6}{7} & \cellcolor{gray!6}{90} & \cellcolor{gray!6}{10}\\
+\addlinespace
+1400 & 408000 & 2 & 2.00 & 1200 & 3900 & 1 & 1 & 1 & 3 & 7 & 9 & 17\\
+\cellcolor{gray!6}{5724} & \cellcolor{gray!6}{96500} & \cellcolor{gray!6}{3} & \cellcolor{gray!6}{1.00} & \cellcolor{gray!6}{840} & \cellcolor{gray!6}{12091} & \cellcolor{gray!6}{1} & \cellcolor{gray!6}{1} & \cellcolor{gray!6}{1} & \cellcolor{gray!6}{3} & \cellcolor{gray!6}{5} & \cellcolor{gray!6}{55} & \cellcolor{gray!6}{0}\\
+18774 & 322500 & 3 & 2.00 & 1350 & 14200 & 1 & 1 & 1 & 3 & 6 & 25 & 50\\
+\cellcolor{gray!6}{3965} & \cellcolor{gray!6}{364950} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{2.50} & \cellcolor{gray!6}{2310} & \cellcolor{gray!6}{8030} & \cellcolor{gray!6}{2} & \cellcolor{gray!6}{1} & \cellcolor{gray!6}{1} & \cellcolor{gray!6}{3} & \cellcolor{gray!6}{6} & \cellcolor{gray!6}{36} & \cellcolor{gray!6}{34}\\
+9097 & 384000 & 6 & 3.00 & 2320 & 4502 & 1 & 1 & 1 & 4 & 6 & 27 & 19\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-10}Coefficients de corrélation linéaire de Pearson de la nouvelle base de données :}
+\centering
+\resizebox{\linewidth}{!}{
+\begin{tabular}[t]{lrrrrrrrr}
+\toprule
+  & price & bedrooms & bathrooms & sqft\_living & sqft\_lot & floors & life\_built & life\_renovated\\
+\midrule
+\cellcolor{gray!6}{price} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{0.308} & \cellcolor{gray!6}{0.525} & \cellcolor{gray!6}{0.702} & \cellcolor{gray!6}{0.090} & \cellcolor{gray!6}{0.257} & \cellcolor{gray!6}{-0.054} & \cellcolor{gray!6}{-0.003}\\
+bedrooms & 0.308 & 1.000 & 0.516 & 0.577 & 0.032 & 0.175 & -0.154 & -0.001\\
+\cellcolor{gray!6}{bathrooms} & \cellcolor{gray!6}{0.525} & \cellcolor{gray!6}{0.516} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{0.755} & \cellcolor{gray!6}{0.088} & \cellcolor{gray!6}{0.501} & \cellcolor{gray!6}{-0.506} & \cellcolor{gray!6}{-0.003}\\
+sqft\_living & 0.702 & 0.577 & 0.755 & 1.000 & 0.173 & 0.354 & -0.318 & -0.002\\
+\cellcolor{gray!6}{sqft\_lot} & \cellcolor{gray!6}{0.090} & \cellcolor{gray!6}{0.032} & \cellcolor{gray!6}{0.088} & \cellcolor{gray!6}{0.173} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{-0.005} & \cellcolor{gray!6}{-0.053} & \cellcolor{gray!6}{0.008}\\
+\addlinespace
+floors & 0.257 & 0.175 & 0.501 & 0.354 & -0.005 & 1.000 & -0.490 & -0.009\\
+\cellcolor{gray!6}{life\_built} & \cellcolor{gray!6}{-0.054} & \cellcolor{gray!6}{-0.154} & \cellcolor{gray!6}{-0.506} & \cellcolor{gray!6}{-0.318} & \cellcolor{gray!6}{-0.053} & \cellcolor{gray!6}{-0.490} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{-0.003}\\
+life\_renovated & -0.003 & -0.001 & -0.003 & -0.002 & 0.008 & -0.009 & -0.003 & 1.000\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+D'après la table 8, nous supposons que les coefficients adossés aux
+variables \texttt{bedrooms}, \texttt{bathrooms}, \texttt{sqft\_living},
+\texttt{sqft\_lot} et \texttt{floors} sont strictement supérieurs à 0 et
+que les coefficients adossés aux variables \texttt{life\_built} et
+\texttt{life\_renovated} sont strictement inférieurs à 0.
+
+\newpage
+
+\hypertarget{mathcala_1-lanalyse-du-prix-dun-logement-en-fonction-de-sa-superficie-intuxe9rieure-en-pieds-carruxe9s-et-de-sa-superficie-extuxe9rieure-en-pieds-carruxe9s}{%
+\section{\texorpdfstring{\(\mathcal{A}_{1}\) : l'analyse du prix d'un
+logement en fonction de sa superficie intérieure en pieds carrés et de
+sa superficie extérieure en pieds
+carrés}{\textbackslash mathcal\{A\}\_\{1\} : l'analyse du prix d'un logement en fonction de sa superficie intérieure en pieds carrés et de sa superficie extérieure en pieds carrés}}\label{mathcala_1-lanalyse-du-prix-dun-logement-en-fonction-de-sa-superficie-intuxe9rieure-en-pieds-carruxe9s-et-de-sa-superficie-extuxe9rieure-en-pieds-carruxe9s}}
+
+\[\mathcal{A}_{1}=\{\mathcal{M}_{1},\mathcal{M}_{3},\mathcal{M}_{4},\mathcal{M}_{4},\mathcal{M}_{5},\mathcal{M}_{6}\}\]
+
+\begin{table}[!htbp] \centering 
+  \caption{Régressions linéaires de l'analyse 1 :} 
+  \label{} 
+\small 
+\begin{tabular}{@{\extracolsep{1pt}}lccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-4} 
+\\[-1.8ex] & \multicolumn{3}{c}{price} \\ 
+\\[-1.8ex] & (1) & (2) & (3)\\ 
+\hline \\[-1.8ex] 
+ sqft\_living & 282.879$^{***}$ & 280.624$^{***}$ &  \\ 
+  & (1.964) & (1.936) &  \\ 
+  sqft\_lot & $-$0.289$^{***}$ &  & 0.795$^{***}$ \\ 
+  & (0.044) &  & (0.060) \\ 
+  Constant & $-$43,900.230$^{***}$ & $-$43,580.740$^{***}$ & 528,082.600$^{***}$ \\ 
+  & (4,398.565) & (4,402.690) & (2,647.505) \\ 
+ \hline \\[-1.8ex] 
+Observations & 21,613 & 21,613 & 21,613 \\ 
+R$^{2}$ & 0.494 & 0.493 & 0.008 \\ 
+Adjusted R$^{2}$ & 0.494 & 0.493 & 0.008 \\ 
+Residual Std. Error & 261,192.300 (df = 21610) & 261,452.900 (df = 21611) & 365,657.000 (df = 21611) \\ 
+F Statistic & 10,543.990$^{***}$ (df = 2; 21610) & 21,001.910$^{***}$ (df = 1; 21611) & 175.140$^{***}$ (df = 1; 21611) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table}
+
+\begin{table}[!htbp] \centering 
+  \caption{Régressions linéaires de l'analyse 1 :} 
+  \label{} 
+\small 
+\begin{tabular}{@{\extracolsep{1pt}}lccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-4} 
+\\[-1.8ex] & \multicolumn{3}{c}{log(price)} \\ 
+\\[-1.8ex] & (1) & (2) & (3)\\ 
+\hline \\[-1.8ex] 
+ log(sqft\_living) & 0.873$^{***}$ & 0.837$^{***}$ &  \\ 
+  & (0.007) & (0.006) &  \\ 
+  log(sqft\_lot) & $-$0.053$^{***}$ &  & 0.080$^{***}$ \\ 
+  & (0.003) &  & (0.004) \\ 
+  Constant & 6.930$^{***}$ & 6.730$^{***}$ & 12.325$^{***}$ \\ 
+  & (0.048) & (0.047) & (0.036) \\ 
+ \hline \\[-1.8ex] 
+Observations & 21,613 & 21,613 & 21,613 \\ 
+R$^{2}$ & 0.463 & 0.456 & 0.019 \\ 
+Adjusted R$^{2}$ & 0.463 & 0.455 & 0.019 \\ 
+Residual Std. Error & 0.386 (df = 21610) & 0.389 (df = 21611) & 0.522 (df = 21611) \\ 
+F Statistic & 9,310.386$^{***}$ (df = 2; 21610) & 18,079.140$^{***}$ (df = 1; 21611) & 417.860$^{***}$ (df = 1; 21611) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table}
+
+\newpage
+
+\hypertarget{analyse-des-ruxe9sultats}{%
+\subsection{Analyse des résultats}\label{analyse-des-ruxe9sultats}}
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-12}Aperçu de la base de données de l'analyse 1 :}
+\centering
+\begin{tabular}[t]{lrrr}
+\toprule
+  & price & sqft\_living & sqft\_lot\\
+\midrule
+\cellcolor{gray!6}{4789} & \cellcolor{gray!6}{716100} & \cellcolor{gray!6}{1640} & \cellcolor{gray!6}{4000}\\
+13910 & 695000 & 2650 & 9990\\
+\cellcolor{gray!6}{8533} & \cellcolor{gray!6}{350000} & \cellcolor{gray!6}{900} & \cellcolor{gray!6}{6380}\\
+11667 & 650000 & 1910 & 16532\\
+\cellcolor{gray!6}{12078} & \cellcolor{gray!6}{285000} & \cellcolor{gray!6}{1930} & \cellcolor{gray!6}{7200}\\
+\addlinespace
+18904 & 435000 & 670 & 1800\\
+\cellcolor{gray!6}{16764} & \cellcolor{gray!6}{829000} & \cellcolor{gray!6}{2690} & \cellcolor{gray!6}{10443}\\
+12123 & 251000 & 840 & 4495\\
+\cellcolor{gray!6}{19044} & \cellcolor{gray!6}{872000} & \cellcolor{gray!6}{2860} & \cellcolor{gray!6}{40284}\\
+8676 & 242000 & 2340 & 7494\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-13}Comparaison des performances des régressions linéaires de l'analyse 1}
+\centering
+\resizebox{\linewidth}{!}{
+\begin{tabular}[t]{llrrrrrrr}
+\toprule
+Name & Model & AIC & BIC & R2 & R2\_adjusted & RMSE & Sigma & Performance\_Score\\
+\midrule
+\cellcolor{gray!6}{model4} & \cellcolor{gray!6}{lm} & \cellcolor{gray!6}{20195.57} & \cellcolor{gray!6}{20227.50} & \cellcolor{gray!6}{0.463} & \cellcolor{gray!6}{0.463} & \cellcolor{gray!6}{0.386} & \cellcolor{gray!6}{0.386} & \cellcolor{gray!6}{0.979}\\
+model5 & lm & 20486.98 & 20510.93 & 0.456 & 0.455 & 0.389 & 0.389 & 0.974\\
+\cellcolor{gray!6}{model6} & \cellcolor{gray!6}{lm} & \cellcolor{gray!6}{33211.62} & \cellcolor{gray!6}{33235.57} & \cellcolor{gray!6}{0.019} & \cellcolor{gray!6}{0.019} & \cellcolor{gray!6}{0.522} & \cellcolor{gray!6}{0.522} & \cellcolor{gray!6}{0.667}\\
+model1 & lm & 600498.46 & 600530.39 & 0.494 & 0.494 & 261174.188 & 261192.316 & 0.437\\
+\cellcolor{gray!6}{model2} & \cellcolor{gray!6}{lm} & \cellcolor{gray!6}{600540.57} & \cellcolor{gray!6}{600564.51} & \cellcolor{gray!6}{0.493} & \cellcolor{gray!6}{0.493} & \cellcolor{gray!6}{261440.790} & \cellcolor{gray!6}{261452.888} & \cellcolor{gray!6}{0.436}\\
+\addlinespace
+model3 & lm & 615040.37 & 615064.31 & 0.008 & 0.008 & 365640.079 & 365656.998 & 0.000\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+Nous allons analyser le modèle 5.
+
+\[\mathcal{M}_{5}:\log(y_{i})=\alpha+\beta_{6}\log(x_{i,6})+z_{i} \iff \mathcal{M}_{5}:\log(y_{i})=6,730+0,837\log(x_{i,6})+z_{i}\]
+
+Pour \(\alpha\), nous avons moins de 0,1\% de chance de se tromper en
+rejetant l'hypothèse nulle. Par conséquent, nous rejetons l'hypothèse
+nulle et nous en déduisons que la constante du modèle 5 est différente
+de 0 au seuil de 0,1\%.
+
+Pour \(\beta_{6}\), nous avons moins de 0,1\% de chance de se tromper en
+rejetant l'hypothèse nulle. Par conséquent, nous rejetons l'hypothèse
+nulle et nous en déduisons que le coefficient du modèle 5 de la variable
+explicative \texttt{sqft\_living} est différent de 0 au seuil de 0,1\%.
+
+Nous avons \(R^{2}=0,456\) dans le modèle 5 donc 45,6\% de la variation
+du prix des logements est expliquée par la surface intérieure de ces
+derniers.
+
+Pour \(F\), nous avons moins de 0,1\% de chance de se tromper en
+rejetant l'hypothèse d'absence globale de significativité. Par
+conséquent, nous rejetons l'hypothèse d'absence globale de
+significativité et nous en déduisons que le modèle 1 est globalement
+avéré au seuil de 0,1\%.
+
+\newpage
+
+\hypertarget{analyse-des-ruxe9sidus}{%
+\subsection{Analyse des résidus}\label{analyse-des-ruxe9sidus}}
+
+\begin{center}\includegraphics{E2-L3S2--1-_files/figure-latex/data.figure7-1} \end{center}
+
+\begin{figure}
+\centering
+\includegraphics[width=1\textwidth,height=\textheight]{plot (3).png}
+\caption{Graphiques de l'analyse des résidus}
+\end{figure}
+
+\newpage
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-14}Tests de l'analyse des résidus :}
+\centering
+\begin{tabular}[t]{lrrr}
+\toprule
+  & Harrison\_McCabe & Breusch\_Pagan & Durbin\_Watson\\
+\midrule
+\cellcolor{gray!6}{p-value} & \cellcolor{gray!6}{0.971} & \cellcolor{gray!6}{0.000} & \cellcolor{gray!6}{0.055}\\
+statistic & 0.509 & 27.552 & 1.978\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Pour \(DW\) nous avons 5,5\% de chance de se tomper en rejetant
+l'hypothèse d'absence d'autocorrélation. Par conséquent, nous conservons
+l'hypothèse d'absence d'autocorrélation et nous en déduisons que les
+résidus ne sont pas autocorrélés au seuil de 0,1\%.
+
+Nous observons que les résidus sont globalement répartis le long de la
+droite. Nous en déduisons que les résidus suivent une loi normale.
+
+Pour \(BP\), nous avons moins de 0,1\% de chance de se tomper en
+rejetant l'hypothèse d'homoscédasticité. Par conséquent, nous rejetons
+l'hypothèse d'homoscédasticité et nous en déduisons que les résidus sont
+hétéroscédastiques au seuil de 0,1\%.
+
+Nous observons l'existence de résidus qui ne sont globalement pas
+linéaires et qui dépassent la distance de Cook. Nous en déduisons que le
+logement 15871 et dans une moindre mesure les logements 9255, 8338, 7253
+et 6403 ont un résidu aberrant.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{data.analyse1 <-}\StringTok{ }\NormalTok{data[ }\OperatorTok{-}\StringTok{ }\KeywordTok{c}\NormalTok{( }\DecValTok{15871}\NormalTok{,}
+                            \DecValTok{9255}\NormalTok{,}
+                            \DecValTok{8338}\NormalTok{,}
+                            \DecValTok{7253}\NormalTok{,}
+                            \DecValTok{6403}\NormalTok{ ), ]}
+\end{Highlighting}
+\end{Shaded}
+
+Les hypothèses nécessaires des résultats et des résidus sont avérés au
+seuil de 0,1\%. Notre constante, notre coefficient, notre
+significativité, notre linéarité des résidus, notre absence
+d'autocorrélation des résidus et notre appartenance à une loi normale
+des résidus sont avérés au seuil de 0,1\%. L'hypothèse
+d'hétéroscédasticité ne pose pas de problème car le prix des logements
+et la variance du prix des logements ne sont pas homogènes.
+
+En conclusion, de manière biaisé par la distance de Cook, nous avons
+0,1\% de chance de se tromper en affirmant que plus la surface
+intérieure en pieds carrés est élevée et plus le prix des logements est
+élevé selon la relation \(\mathcal{M}_{5}\).
+
+\newpage
+
+\hypertarget{analyse-du-moduxe8le-5-moins-les-ruxe9sidus-aberrants-pour-la-distance-de-cook}{%
+\subsection{Analyse du modèle 5 moins les résidus aberrants pour la
+distance de
+Cook}\label{analyse-du-moduxe8le-5-moins-les-ruxe9sidus-aberrants-pour-la-distance-de-cook}}
+
+\begin{table}[!htbp] \centering 
+  \caption{Régression linéaire du modèle 5 moins les résidus aberrants :} 
+  \label{} 
+\small 
+\begin{tabular}{@{\extracolsep{1pt}}lc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{1}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-2} 
+\\[-1.8ex] & log(price) \\ 
+\hline \\[-1.8ex] 
+ log(sqft\_living) & 0.835$^{***}$ \\ 
+  & (0.006) \\ 
+  Constant & 6.740$^{***}$ \\ 
+  & (0.047) \\ 
+ \hline \\[-1.8ex] 
+Observations & 21,608 \\ 
+R$^{2}$ & 0.455 \\ 
+Adjusted R$^{2}$ & 0.455 \\ 
+Residual Std. Error & 0.388 (df = 21606) \\ 
+F Statistic & 18,022.850$^{***}$ (df = 1; 21606) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table}
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-17}Performances de la régression linéaire du modèle 5 moins les résidus aberrants :}
+\centering
+\resizebox{\linewidth}{!}{
+\begin{tabular}[t]{llrrrrrrr}
+\toprule
+Name & Model & AIC & BIC & R2 & R2\_adjusted & RMSE & Sigma & Performance\_Score\\
+\midrule
+\cellcolor{gray!6}{model5} & \cellcolor{gray!6}{lm} & \cellcolor{gray!6}{20444.54} & \cellcolor{gray!6}{20468.48} & \cellcolor{gray!6}{0.455} & \cellcolor{gray!6}{0.455} & \cellcolor{gray!6}{0.388} & \cellcolor{gray!6}{0.388} & \cellcolor{gray!6}{NaN}\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\hypertarget{analyse-des-ruxe9sultats-1}{%
+\subsubsection{Analyse des résultats}\label{analyse-des-ruxe9sultats-1}}
+
+\[\mathcal{M}_{5}:\log(y_{i})=\alpha+\beta_{6}\log(x_{i,6})+z_{i} \iff \mathcal{M}_{5}:\log(y_{i})=6,74+0,835\log(x_{i,6})+z_{i}\]
+
+Pour \(\alpha\), nous avons moins de 0,1\% de chance de se tromper en
+rejetant l'hypothèse nulle. Par conséquent, nous rejetons l'hypothèse
+nulle et nous en déduisons que la constante du modèle 5 est différente
+de 0 au seuil de 0,1\%.
+
+Pour \(\beta_{6}\), nous avons moins de 0,1\% de chance de se tromper en
+rejetant l'hypothèse nulle. Par conséquent, nous rejetons l'hypothèse
+nulle et nous en déduisons que le coefficient du modèle 5 de la variable
+explicative \texttt{sqft\_living} est différent de 0 au seuil de 0,1\%.
+
+Nous avons \(R^{2}=0,455\) dans le modèle 5 donc 45,5\% de la variation
+du prix des logements est expliquée par la surface intérieure de ces
+derniers.
+
+Pour \(F\), nous avons moins de 0,1\% de chance de se tromper en
+rejetant l'hypothèse d'absence globale de significativité. Par
+conséquent, nous rejetons l'hypothèse d'absence globale de
+significativité et nous en déduisons que le modèle 1 est globalement
+avéré au seuil de 0,1\%.
+
+\newpage
+
+\hypertarget{analyse-des-ruxe9sidus-1}{%
+\subsubsection{Analyse des résidus}\label{analyse-des-ruxe9sidus-1}}
+
+\begin{center}\includegraphics{E2-L3S2--1-_files/figure-latex/data.figure12-1} \end{center}
+
+\begin{figure}
+\centering
+\includegraphics[width=1\textwidth,height=\textheight]{plot (10).png}
+\caption{Graphiques de l'analyse des résidus}
+\end{figure}
+
+\newpage
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-18}Tests de l'analyse des résidus :}
+\centering
+\begin{tabular}[t]{lrrr}
+\toprule
+  & Harrison\_McCabe & Breusch\_Pagan & Durbin\_Watson\\
+\midrule
+\cellcolor{gray!6}{p-value} & \cellcolor{gray!6}{0.966} & \cellcolor{gray!6}{0.000} & \cellcolor{gray!6}{0.053}\\
+statistic & 0.508 & 23.913 & 1.978\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Pour \(DW\) nous avons 5,3\% de chance de se tomper en rejetant
+l'hypothèse d'absence d'autocorrélation. Par conséquent, nous conservons
+l'hypothèse d'absence d'autocorrélation et nous en déduisons que les
+résidus ne sont pas autocorrélés au seuil de 0,1\%.
+
+Nous observons que les résidus sont globalement répartis le long de la
+droite. Nous en déduisons que les résidus suivent une loi normale.
+
+Pour \(BP\), nous avons moins de 0,1\% de chance de se tomper en
+rejetant l'hypothèse d'homoscédasticité. Par conséquent, nous rejetons
+l'hypothèse d'homoscédasticité et nous en déduisons que les résidus sont
+hétéroscédastiques au seuil de 0,1\%.
+
+Nous observons l'existence de résidus qui ne sont globalement pas
+linéaires et qui tendent vers la distance de Cook. Nous en déduisons
+que, dans une moindre mesure, les logements 10447, 4412, 3915, 1449 et
+1316 ont un résidu aberrant.
+
+Nous avons 0,1\% de chance de se tromper en affirmant que plus la
+surface intérieure en pieds carrés est élevée et plus le prix des
+logements est élevé selon la relation \(\mathcal{M}_{5}\).
+
+\begin{center}\includegraphics{E2-L3S2--1-_files/figure-latex/data.figure13-1} \end{center}
+
+\newpage
+
+\hypertarget{mathcala_1h-lanalyse-de-lhuxe9tuxe9roscuxe9dasticituxe9}{%
+\subsection{\texorpdfstring{\(\mathcal{A}_{1}^{H}\) : l'analyse de
+l'hétéroscédasticité}{\textbackslash mathcal\{A\}\_\{1\}\^{}\{H\} : l'analyse de l'hétéroscédasticité}}\label{mathcala_1h-lanalyse-de-lhuxe9tuxe9roscuxe9dasticituxe9}}
+
+Nous allons essayer de conserver l'hypothèse d'homoscédasticité des
+résidus en segmentant le prix des logements. Nous allons créer de
+nouvelles bases de données en fonction du minimum, du maximum et de la
+médiane :
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{data.analyse1.min_q1 <-}\StringTok{ }\NormalTok{data.analyse1[ data.analyse1}\OperatorTok{$}\NormalTok{price }\OperatorTok{>=}\StringTok{ }\DecValTok{75000} \OperatorTok{&}
+\StringTok{                                         }\NormalTok{data.analyse1}\OperatorTok{$}\NormalTok{price }\OperatorTok{<=}\StringTok{ }\DecValTok{321950}\NormalTok{, ]}\CommentTok{# modèle 1,}
+
+\NormalTok{data.analyse1.min_q2 <-}\StringTok{ }\NormalTok{data.analyse1[ data.analyse1}\OperatorTok{$}\NormalTok{price }\OperatorTok{>=}\StringTok{ }\DecValTok{75000} \OperatorTok{&}
+\StringTok{                                         }\NormalTok{data.analyse1}\OperatorTok{$}\NormalTok{price }\OperatorTok{<=}\StringTok{ }\DecValTok{450000}\NormalTok{, ]}\CommentTok{# modèle 2,}
+
+\NormalTok{data.analyse1.min_q3 <-}\StringTok{ }\NormalTok{data.analyse1[ data.analyse1}\OperatorTok{$}\NormalTok{price }\OperatorTok{>=}\StringTok{ }\DecValTok{75000} \OperatorTok{&}
+\StringTok{                                         }\NormalTok{data.analyse1}\OperatorTok{$}\NormalTok{price }\OperatorTok{<=}\StringTok{ }\DecValTok{645000}\NormalTok{, ]}\CommentTok{# modèle 3,}
+
+\NormalTok{data.analyse1.q1_q2 <-}\StringTok{ }\NormalTok{data.analyse1[ data.analyse1}\OperatorTok{$}\NormalTok{price }\OperatorTok{>=}\StringTok{ }\DecValTok{321950} \OperatorTok{&}
+\StringTok{                                        }\NormalTok{data.analyse1}\OperatorTok{$}\NormalTok{price }\OperatorTok{<=}\StringTok{ }\DecValTok{450000}\NormalTok{, ]}\CommentTok{# modèle 4,}
+
+\NormalTok{data.analyse1.q2_q3 <-}\StringTok{ }\NormalTok{data.analyse1[ data.analyse1}\OperatorTok{$}\NormalTok{price }\OperatorTok{>=}\StringTok{ }\DecValTok{450000} \OperatorTok{&}
+\StringTok{                                        }\NormalTok{data.analyse1}\OperatorTok{$}\NormalTok{price }\OperatorTok{<=}\StringTok{ }\DecValTok{645000}\NormalTok{, ]}\CommentTok{# modèle 5,}
+
+\NormalTok{data.analyse1.q1_q3 <-}\StringTok{ }\NormalTok{data.analyse1[ data.analyse1}\OperatorTok{$}\NormalTok{price }\OperatorTok{>=}\StringTok{ }\DecValTok{321950} \OperatorTok{&}
+\StringTok{                                        }\NormalTok{data.analyse1}\OperatorTok{$}\NormalTok{price }\OperatorTok{<=}\StringTok{ }\DecValTok{645000}\NormalTok{, ]}\CommentTok{# modèle 6,}
+\end{Highlighting}
+\end{Shaded}
+
+Nous pensons que les logements les plus chers ont une influence sur
+l'homogénéité du prix de ces derniers. En effet, le prix d'un logement
+varie grandement lorsque ce dernier est très élevé. Quelle est la
+différence entre un logement coûtant 1 000 000 dollars et un logement
+coûtant 1 500 000 dollars ? D'après les interviews \textit{Asking Price}
+de la chaîne YouTube \textbf{Architectural Digest}, nous nous trompons
+communément sur le prix d'un logement en fonction de sa surface
+intérieure, de sa surface extérieure, etc. En effet, nous omettons le
+\textit{standing}. Par conséquent, nous allons segmenter la base de
+données \texttt{BDD\_data.csv} et comparer les résultats et les résidus
+des nouvelles bases de données.
+
+\newpage
+
+\[\mathcal{A}_{1}^{H}=\{\mathcal{M}_{1}^{H},\mathcal{M}_{2}^{H},\mathcal{M}_{3}^{H},\mathcal{M}_{4}^{H},\mathcal{M}_{5}^{H},\mathcal{M}_{6}^{H}\}\]
+
+\begin{table}[!htbp] \centering 
+  \caption{Régressions linéaires supplémentaires de l'analyse 1 :} 
+  \label{} 
+\small 
+\begin{tabular}{@{\extracolsep{1pt}}lccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-4} 
+\\[-1.8ex] & \multicolumn{3}{c}{log(price)} \\ 
+\\[-1.8ex] & (1) & (2) & (3)\\ 
+\hline \\[-1.8ex] 
+ log(sqft\_living) & 0.276$^{***}$ & 0.301$^{***}$ & 0.447$^{***}$ \\ 
+  & (0.008) & (0.007) & (0.007) \\ 
+  Constant & 10.416$^{***}$ & 10.427$^{***}$ & 9.508$^{***}$ \\ 
+  & (0.059) & (0.052) & (0.050) \\ 
+ \hline \\[-1.8ex] 
+Observations & 5,404 & 10,864 & 16,239 \\ 
+R$^{2}$ & 0.174 & 0.144 & 0.212 \\ 
+Adjusted R$^{2}$ & 0.174 & 0.144 & 0.212 \\ 
+Residual Std. Error & 0.200 (df = 5402) & 0.259 (df = 10862) & 0.313 (df = 16237) \\ 
+F Statistic & 1,140.195$^{***}$ (df = 1; 5402) & 1,828.210$^{***}$ (df = 1; 10862) & 4,376.828$^{***}$ (df = 1; 16237) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table}
+
+\begin{table}[!htbp] \centering 
+  \caption{Régressions linéaires supplémentaires de l'analyse 1 :} 
+  \label{} 
+\small 
+\begin{tabular}{@{\extracolsep{1pt}}lccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-4} 
+\\[-1.8ex] & \multicolumn{3}{c}{log(price)} \\ 
+\\[-1.8ex] & (1) & (2) & (3)\\ 
+\hline \\[-1.8ex] 
+ log(sqft\_living) & 0.019$^{***}$ & 0.067$^{***}$ & 0.153$^{***}$ \\ 
+  & (0.004) & (0.004) & (0.005) \\ 
+  Constant & 12.716$^{***}$ & 12.679$^{***}$ & 11.873$^{***}$ \\ 
+  & (0.029) & (0.032) & (0.039) \\ 
+ \hline \\[-1.8ex] 
+Observations & 5,461 & 5,547 & 10,836 \\ 
+R$^{2}$ & 0.004 & 0.044 & 0.073 \\ 
+Adjusted R$^{2}$ & 0.004 & 0.044 & 0.073 \\ 
+Residual Std. Error & 0.100 (df = 5459) & 0.101 (df = 5545) & 0.188 (df = 10834) \\ 
+F Statistic & 24.103$^{***}$ (df = 1; 5459) & 254.578$^{***}$ (df = 1; 5545) & 852.732$^{***}$ (df = 1; 10834) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table}
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-21}Comparaison des performances des régressions linéaires supplémentaires de l'analyse 1}
+\centering
+\resizebox{\linewidth}{!}{
+\begin{tabular}[t]{llrrrrrrr}
+\toprule
+Name & Model & AIC & BIC & R2 & R2\_adjusted & RMSE & Sigma & Performance\_Score\\
+\midrule
+\cellcolor{gray!6}{model5} & \cellcolor{gray!6}{lm} & \cellcolor{gray!6}{-9655.489} & \cellcolor{gray!6}{-9635.626} & \cellcolor{gray!6}{0.044} & \cellcolor{gray!6}{0.044} & \cellcolor{gray!6}{0.101} & \cellcolor{gray!6}{0.101} & \cellcolor{gray!6}{0.727}\\
+model4 & lm & -9668.215 & -9648.399 & 0.004 & 0.004 & 0.100 & 0.100 & 0.667\\
+\cellcolor{gray!6}{model1} & \cellcolor{gray!6}{lm} & \cellcolor{gray!6}{-2047.937} & \cellcolor{gray!6}{-2028.152} & \cellcolor{gray!6}{0.174} & \cellcolor{gray!6}{0.174} & \cellcolor{gray!6}{0.200} & \cellcolor{gray!6}{0.200} & \cellcolor{gray!6}{0.642}\\
+model6 & lm & -5422.781 & -5400.909 & 0.073 & 0.073 & 0.188 & 0.188 & 0.560\\
+\cellcolor{gray!6}{model2} & \cellcolor{gray!6}{lm} & \cellcolor{gray!6}{1499.602} & \cellcolor{gray!6}{1521.482} & \cellcolor{gray!6}{0.144} & \cellcolor{gray!6}{0.144} & \cellcolor{gray!6}{0.259} & \cellcolor{gray!6}{0.259} & \cellcolor{gray!6}{0.435}\\
+\addlinespace
+model3 & lm & 8385.804 & 8408.889 & 0.212 & 0.212 & 0.313 & 0.313 & 0.333\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\newpage
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-22}Tests de l'analyse des résidus du modèle 1 :}
+\centering
+\begin{tabular}[t]{lrrr}
+\toprule
+  & Harrison\_McCabe & Breusch\_Pagan & Durbin\_Watson\\
+\midrule
+\cellcolor{gray!6}{p-value} & \cellcolor{gray!6}{0.017} & \cellcolor{gray!6}{0.000} & \cellcolor{gray!6}{0.263}\\
+statistic & 0.479 & 587.741 & 1.983\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-22}Tests de l'analyse des résidus du modèle 2 :}
+\centering
+\begin{tabular}[t]{lrrr}
+\toprule
+  & Harrison\_McCabe & Breusch\_Pagan & Durbin\_Watson\\
+\midrule
+\cellcolor{gray!6}{p-value} & \cellcolor{gray!6}{0.855} & \cellcolor{gray!6}{0.000} & \cellcolor{gray!6}{0.319}\\
+statistic & 0.507 & 1136.047 & 1.991\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-22}Tests de l'analyse des résidus du modèle 3 :}
+\centering
+\begin{tabular}[t]{lrrr}
+\toprule
+  & Harrison\_McCabe & Breusch\_Pagan & Durbin\_Watson\\
+\midrule
+\cellcolor{gray!6}{p-value} & \cellcolor{gray!6}{0.935} & \cellcolor{gray!6}{0.000} & \cellcolor{gray!6}{0.325}\\
+statistic & 0.509 & 1010.537 & 1.993\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-22}Tests de l'analyse des résidus du modèle 4 :}
+\centering
+\begin{tabular}[t]{lrrr}
+\toprule
+  & Harrison\_McCabe & Breusch\_Pagan & Durbin\_Watson\\
+\midrule
+\cellcolor{gray!6}{p-value} & \cellcolor{gray!6}{0.745} & \cellcolor{gray!6}{0.312} & \cellcolor{gray!6}{0.365}\\
+statistic & 0.507 & 1.023 & 1.991\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-22}Tests de l'analyse des résidus du modèle 5 :}
+\centering
+\begin{tabular}[t]{lrrr}
+\toprule
+  & Harrison\_McCabe & Breusch\_Pagan & Durbin\_Watson\\
+\midrule
+\cellcolor{gray!6}{p-value} & \cellcolor{gray!6}{0.536} & \cellcolor{gray!6}{0.001} & \cellcolor{gray!6}{0.895}\\
+statistic & 0.501 & 11.256 & 2.034\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-22}Tests de l'analyse des résidus du modèle 6 :}
+\centering
+\begin{tabular}[t]{lrrr}
+\toprule
+  & Harrison\_McCabe & Breusch\_Pagan & Durbin\_Watson\\
+\midrule
+\cellcolor{gray!6}{p-value} & \cellcolor{gray!6}{0.521} & \cellcolor{gray!6}{0.00} & \cellcolor{gray!6}{0.556}\\
+statistic & 0.500 & 70.24 & 2.003\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+En conclusion, nous conservons l'hypothèse d'homoscédasticité et nous en
+déduisons que les résidus sont homoscédastiques au seuil de 0,1\%
+uniquement dans le modèle 4 c'est à dire pour les logements coûtant
+entre 321 950 dollars et 450 000 dollars. Est-ce que le prix d'un
+logement varie grandement même lorsque ce dernier n'est pas très élevé ?
+\textit{A priori}, nous supposons que oui concernant la ville de Seattle
+dans l'État de Washington aux États-Unis.
+
+\newpage
+
+\hypertarget{mathcala_2-lanalyse-du-prix-dun-logement-en-fonction-de-son-nombre-de-chambres-de-son-nombre-de-salles-de-bain-et-de-son-nombre-duxe9tages}{%
+\section{\texorpdfstring{\(\mathcal{A}_{2}\) : l'analyse du prix d'un
+logement en fonction de son nombre de chambres, de son nombre de salles
+de bain et de son nombre
+d'étages}{\textbackslash mathcal\{A\}\_\{2\} : l'analyse du prix d'un logement en fonction de son nombre de chambres, de son nombre de salles de bain et de son nombre d'étages}}\label{mathcala_2-lanalyse-du-prix-dun-logement-en-fonction-de-son-nombre-de-chambres-de-son-nombre-de-salles-de-bain-et-de-son-nombre-duxe9tages}}
+
+\[\mathcal{A}_{2}=\{\mathcal{M}_{1},\mathcal{M}_{2},\mathcal{M}_{3},\mathcal{M}_{4}\}\]
+
+\begin{table}[!htbp] \centering 
+  \caption{Régressions linéaires de l'analyse 2 :} 
+  \label{} 
+\small 
+\begin{tabular}{@{\extracolsep{1pt}}lcc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{2}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-3} 
+\\[-1.8ex] & log(price) & price \\ 
+\\[-1.8ex] & (1) & (2)\\ 
+\hline \\[-1.8ex] 
+ bedrooms & 0.049$^{***}$ & 20,024.380$^{***}$ \\ 
+  & (0.004) & (2,680.838) \\ 
+  bathrooms & 0.327$^{***}$ & 238,461.400$^{***}$ \\ 
+  & (0.005) & (3,681.888) \\ 
+  floors & 0.055$^{***}$ & $-$1,737.472 \\ 
+  & (0.006) & (4,569.452) \\ 
+  Constant & 12.109$^{***}$ & $-$29,102.610$^{***}$ \\ 
+  & (0.013) & (9,209.213) \\ 
+ \hline \\[-1.8ex] 
+Observations & 21,613 & 21,613 \\ 
+R$^{2}$ & 0.311 & 0.278 \\ 
+Adjusted R$^{2}$ & 0.310 & 0.278 \\ 
+Residual Std. Error (df = 21609) & 0.437 & 312,040.000 \\ 
+F Statistic (df = 3; 21609) & 3,244.010$^{***}$ & 2,769.094$^{***}$ \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{2}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table}
+
+\begin{table}[!htbp] \centering 
+  \caption{Régressions linéaires de l'analyse 2 :} 
+  \label{} 
+\small 
+\begin{tabular}{@{\extracolsep{1pt}}lcc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{2}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-3} 
+\\[-1.8ex] & log(price) & price \\ 
+\\[-1.8ex] & (1) & (2)\\ 
+\hline \\[-1.8ex] 
+ log(sqft\_living) & 0.839$^{***}$ &  \\ 
+  & (0.010) &  \\ 
+  sqft\_living &  & 309.393$^{***}$ \\ 
+  &  & (3.087) \\ 
+  bedrooms & $-$0.070$^{***}$ & $-$57,847.960$^{***}$ \\ 
+  & (0.004) & (2,347.323) \\ 
+  bathrooms & 0.053$^{***}$ & 7,853.522$^{**}$ \\ 
+  & (0.006) & (3,814.223) \\ 
+  floors & 0.044$^{***}$ & 200.497 \\ 
+  & (0.006) & (3,775.505) \\ 
+  Constant & 6.772$^{***}$ & 74,669.670$^{***}$ \\ 
+  & (0.067) & (7,679.122) \\ 
+ \hline \\[-1.8ex] 
+Observations & 21,613 & 21,613 \\ 
+R$^{2}$ & 0.471 & 0.507 \\ 
+Adjusted R$^{2}$ & 0.470 & 0.507 \\ 
+Residual Std. Error (df = 21608) & 0.383 & 257,819.300 \\ 
+F Statistic (df = 4; 21608) & 4,801.148$^{***}$ & 5,553.623$^{***}$ \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{2}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table}
+
+\newpage
+
+\hypertarget{analyse-des-ruxe9sultats-2}{%
+\subsection{Analyse des résultats}\label{analyse-des-ruxe9sultats-2}}
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-24}Aperçu de la base de données de l'analyse 2 :}
+\centering
+\begin{tabular}[t]{lrrrrr}
+\toprule
+  & price & bedrooms & bathrooms & sqft\_living & floors\\
+\midrule
+\cellcolor{gray!6}{19054} & \cellcolor{gray!6}{879950} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{2.25} & \cellcolor{gray!6}{3500} & \cellcolor{gray!6}{1.0}\\
+5372 & 350000 & 2 & 1.00 & 1620 & 1.0\\
+\cellcolor{gray!6}{20600} & \cellcolor{gray!6}{376000} & \cellcolor{gray!6}{3} & \cellcolor{gray!6}{2.00} & \cellcolor{gray!6}{1340} & \cellcolor{gray!6}{3.0}\\
+12819 & 1313000 & 6 & 3.00 & 2980 & 1.5\\
+\cellcolor{gray!6}{14746} & \cellcolor{gray!6}{355000} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{2.25} & \cellcolor{gray!6}{2200} & \cellcolor{gray!6}{2.0}\\
+\addlinespace
+9490 & 238000 & 5 & 2.25 & 2240 & 2.0\\
+\cellcolor{gray!6}{2560} & \cellcolor{gray!6}{890000} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{2.75} & \cellcolor{gray!6}{2610} & \cellcolor{gray!6}{1.0}\\
+14990 & 840000 & 4 & 3.25 & 3160 & 2.0\\
+\cellcolor{gray!6}{642} & \cellcolor{gray!6}{305000} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{2.50} & \cellcolor{gray!6}{2250} & \cellcolor{gray!6}{1.0}\\
+8372 & 435000 & 3 & 2.25 & 1890 & 1.0\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-25}Comparaison des performances des régressions linéaires de l'analyse 2}
+\centering
+\resizebox{\linewidth}{!}{
+\begin{tabular}[t]{llrrrrrrr}
+\toprule
+Name & Model & AIC & BIC & R2 & R2\_adjusted & RMSE & Sigma & Performance\_Score\\
+\midrule
+\cellcolor{gray!6}{model3} & \cellcolor{gray!6}{lm} & \cellcolor{gray!6}{19887.24} & \cellcolor{gray!6}{19935.13} & \cellcolor{gray!6}{0.471} & \cellcolor{gray!6}{0.470} & \cellcolor{gray!6}{0.383} & \cellcolor{gray!6}{0.383} & \cellcolor{gray!6}{0.947}\\
+model1 & lm & 25593.43 & 25633.33 & 0.311 & 0.310 & 0.437 & 0.437 & 0.711\\
+\cellcolor{gray!6}{model4} & \cellcolor{gray!6}{lm} & \cellcolor{gray!6}{599938.62} & \cellcolor{gray!6}{599986.51} & \cellcolor{gray!6}{0.507} & \cellcolor{gray!6}{0.507} & \cellcolor{gray!6}{257789.524} & \cellcolor{gray!6}{257819.348} & \cellcolor{gray!6}{0.396}\\
+model2 & lm & 608188.26 & 608228.17 & 0.278 & 0.278 & 312011.094 & 312039.970 & 0.000\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+Nous allons analyser le modèle 1.
+
+\[\mathcal{M}_{1}:\log(y_{i})=\alpha+\beta_{4}x_{i,4}+\beta_{5}x_{i,5}+\beta_{8}x_{i,8}+z_{i} \iff \mathcal{M}_{1}:\log(y_{i})=\alpha+0,049x_{i,4}+0,327x_{i,5}+0,055x_{i,8}+z_{i}\]
+
+Pour \(\alpha\), nous avons moins de 0,1\% de chance de se tromper en
+rejetant l'hypothèse nulle. Par conséquent, nous rejetons l'hypothèse
+nulle et nous en déduisons que la constante du modèle 1 est différente
+de 0 au seuil de 0,1\%.
+
+Pour \(\beta_{4}\), nous avons moins de 0,1\% de chance de se tromper en
+rejetant l'hypothèse nulle. Par conséquent, nous rejetons l'hypothèse
+nulle et nous en déduisons que le coefficient du modèle 1 de la variable
+explicative \texttt{bedrooms} est différent de 0 au seuil de 0,1\%.
+
+Pour \(\beta_{5}\), nous avons moins de 0,1\% de chance de se tromper en
+rejetant l'hypothèse nulle. Par conséquent, nous rejetons l'hypothèse
+nulle et nous en déduisons que le coefficient du modèle 1 de la variable
+explicative \texttt{bathrooms} est différent de 0 au seuil de 0,1\%.
+
+Pour \(\beta_{8}\), nous avons moins de 0,1\% de chance de se tromper en
+rejetant l'hypothèse nulle. Par conséquent, nous rejetons l'hypothèse
+nulle et nous en déduisons que le coefficient du modèle 1 de la variable
+explicative \texttt{floors} est différent de 0 au seuil de 0,1\%.
+
+Nous avons \(R^{2}=0,311\) dans le modèle 1 donc 31,1\% de la variation
+du prix des logements est expliquée par le nombre de chambres, le nombre
+de salles de bain et le nombre d'étages de ces derniers.
+
+Pour \(F\), nous avons moins de 0,1\% de chance de se tromper en
+rejetant l'hypothèse d'absence globale de significativité. Par
+conséquent, nous rejetons l'hypothèse d'absence globale de
+significativité et nous en déduisons que le modèle 1 est globalement
+avéré au seuil de 0,1\%.
+
+\newpage
+
+\hypertarget{analyse-des-ruxe9sidus-2}{%
+\subsection{Analyse des résidus}\label{analyse-des-ruxe9sidus-2}}
+
+\begin{center}\includegraphics{E2-L3S2--1-_files/figure-latex/data.figure8-1} \end{center}
+
+\begin{figure}
+\centering
+\includegraphics[width=1\textwidth,height=\textheight]{plot (1).png}
+\caption{Graphiques de l'analyse des résidus}
+\end{figure}
+
+\newpage
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-26}Tests de l'analyse des résidus :}
+\centering
+\begin{tabular}[t]{lrrr}
+\toprule
+  & Harrison\_McCabe & Breusch\_Pagan & Durbin\_Watson\\
+\midrule
+\cellcolor{gray!6}{p-value} & \cellcolor{gray!6}{0.860} & \cellcolor{gray!6}{0.000} & \cellcolor{gray!6}{0.001}\\
+statistic & 0.505 & 147.128 & 1.958\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Pour \(DW\), nous avons moins de 0,1\% de chance de se tomper en
+rejetant l'hypothèse d'absence d'autocorrélation. Par conséquent, nous
+rejetons l'hypothèse d'absence d'autocorrélation et nous en déduisons
+que les résidus sont autocorrélés au seuil de 0,1\%.
+
+Nous observons que les résidus sont globalement répartis le long de la
+droite. Nous en déduisons que les résidus suivent une loi normale.
+
+Pour \(BP\), nous avons moins de 0,1\% de chance de se tomper en
+rejetant l'hypothèse d'homoscédasticité. Par conséquent, nous rejetons
+l'hypothèse d'homoscédasticité et nous en déduisons que les résidus sont
+hétéroscédastiques au seuil de 0,1\%.
+
+Nous observons l'existence de résidus qui ne sont globalement pas
+linéaires et qui tendent vers la distance de Cook. Nous en déduisons
+que, dans une moindre mesure, les logements 15871, 8639, 8547, 2445 et
+876 ont un résidu aberrant.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{data.analyse2 <-}\StringTok{ }\NormalTok{data[ }\OperatorTok{-}\StringTok{ }\KeywordTok{c}\NormalTok{( }\DecValTok{15871}\NormalTok{,}
+                            \DecValTok{8639}\NormalTok{,}
+                            \DecValTok{8547}\NormalTok{,}
+                            \DecValTok{2445}\NormalTok{,}
+                            \DecValTok{876}\NormalTok{ ), ]}
+\end{Highlighting}
+\end{Shaded}
+
+Les hypothèses nécessaires des résultats sont avérés au seuil de 0,1\%.
+Néanmoins les hypothèses nécessaires des résidus ne sont pas avérés au
+seuil de 0,1\%. L'hypothèse d'hétéroscédasticité ne pose pas de problème
+car le prix des logements et la variance du prix des logements ne sont
+pas homogènes mais l'hypothèse d'autocorrélation pose un problème car
+les résidus ne sont pas linéaires et aléatoires.
+
+\newpage
+
+\hypertarget{mathcala_2h-lanalyse-de-lautocorruxe9lation}{%
+\subsection{\texorpdfstring{\(\mathcal{A}_{2}^{H}\) : l'analyse de
+l'autocorrélation}{\textbackslash mathcal\{A\}\_\{2\}\^{}\{H\} : l'analyse de l'autocorrélation}}\label{mathcala_2h-lanalyse-de-lautocorruxe9lation}}
+
+Nous allons essayer de conserver l'hypothèse d'autocorrélation des
+résidus en segmentant le prix des logements. Nous allons créer de
+nouvelles bases de données en fonction du minimum, du maximum et de la
+médiane :
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{data.analyse2.min_q1 <-}\StringTok{ }\NormalTok{data.analyse2[ data.analyse2}\OperatorTok{$}\NormalTok{price }\OperatorTok{>=}\StringTok{ }\DecValTok{75000} \OperatorTok{&}
+\StringTok{                                         }\NormalTok{data.analyse2}\OperatorTok{$}\NormalTok{price }\OperatorTok{<=}\StringTok{ }\DecValTok{321950}\NormalTok{, ]}\CommentTok{# modèle 1,}
+
+\NormalTok{data.analyse2.min_q2 <-}\StringTok{ }\NormalTok{data.analyse2[ data.analyse2}\OperatorTok{$}\NormalTok{price }\OperatorTok{>=}\StringTok{ }\DecValTok{75000} \OperatorTok{&}
+\StringTok{                                         }\NormalTok{data.analyse2}\OperatorTok{$}\NormalTok{price }\OperatorTok{<=}\StringTok{ }\DecValTok{450000}\NormalTok{, ]}\CommentTok{# modèle 2,}
+
+\NormalTok{data.analyse2.min_q3 <-}\StringTok{ }\NormalTok{data.analyse2[ data.analyse2}\OperatorTok{$}\NormalTok{price }\OperatorTok{>=}\StringTok{ }\DecValTok{75000} \OperatorTok{&}
+\StringTok{                                         }\NormalTok{data.analyse2}\OperatorTok{$}\NormalTok{price }\OperatorTok{<=}\StringTok{ }\DecValTok{645000}\NormalTok{, ]}\CommentTok{# modèle 3,}
+
+\NormalTok{data.analyse2.q1_q2 <-}\StringTok{ }\NormalTok{data.analyse2[ data.analyse2}\OperatorTok{$}\NormalTok{price }\OperatorTok{>=}\StringTok{ }\DecValTok{321950} \OperatorTok{&}
+\StringTok{                                        }\NormalTok{data.analyse2}\OperatorTok{$}\NormalTok{price }\OperatorTok{<=}\StringTok{ }\DecValTok{450000}\NormalTok{, ]}\CommentTok{# modèle 4,}
+
+\NormalTok{data.analyse2.q2_q3 <-}\StringTok{ }\NormalTok{data.analyse2[ data.analyse2}\OperatorTok{$}\NormalTok{price }\OperatorTok{>=}\StringTok{ }\DecValTok{450000} \OperatorTok{&}
+\StringTok{                                        }\NormalTok{data.analyse2}\OperatorTok{$}\NormalTok{price }\OperatorTok{<=}\StringTok{ }\DecValTok{645000}\NormalTok{, ]}\CommentTok{# modèle 5,}
+
+\NormalTok{data.analyse2.q1_q3 <-}\StringTok{ }\NormalTok{data.analyse2[ data.analyse2}\OperatorTok{$}\NormalTok{price }\OperatorTok{>=}\StringTok{ }\DecValTok{321950} \OperatorTok{&}
+\StringTok{                                        }\NormalTok{data.analyse2}\OperatorTok{$}\NormalTok{price }\OperatorTok{<=}\StringTok{ }\DecValTok{645000}\NormalTok{, ]}\CommentTok{# modèle 6,}
+\end{Highlighting}
+\end{Shaded}
+
+\newpage
+
+\[\mathcal{A}_{1}^{A}=\{\mathcal{M}_{1}^{A},\mathcal{M}_{2}^{A},\mathcal{M}_{3}^{A},\mathcal{M}_{4}^{A},\mathcal{M}_{5}^{A},\mathcal{M}_{6}^{A}\}\]
+
+\begin{table}[!htbp] \centering 
+  \caption{Régressions linéaires supplémentaire de l'analyse 2 :} 
+  \label{} 
+\small 
+\begin{tabular}{@{\extracolsep{1pt}}lccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-4} 
+\\[-1.8ex] & \multicolumn{3}{c}{log(price)} \\ 
+\\[-1.8ex] & (1) & (2) & (3)\\ 
+\hline \\[-1.8ex] 
+ bedrooms & 0.023$^{***}$ & 0.015$^{***}$ & 0.025$^{***}$ \\ 
+  & (0.004) & (0.003) & (0.003) \\ 
+  bathrooms & 0.106$^{***}$ & 0.116$^{***}$ & 0.161$^{***}$ \\ 
+  & (0.006) & (0.005) & (0.005) \\ 
+  floors & 0.044$^{***}$ & 0.046$^{***}$ & 0.048$^{***}$ \\ 
+  & (0.007) & (0.006) & (0.006) \\ 
+  Constant & 12.110$^{***}$ & 12.318$^{***}$ & 12.362$^{***}$ \\ 
+  & (0.012) & (0.011) & (0.011) \\ 
+ \hline \\[-1.8ex] 
+Observations & 5,404 & 10,863 & 16,238 \\ 
+R$^{2}$ & 0.156 & 0.115 & 0.142 \\ 
+Adjusted R$^{2}$ & 0.156 & 0.115 & 0.142 \\ 
+Residual Std. Error & 0.202 (df = 5400) & 0.264 (df = 10859) & 0.327 (df = 16234) \\ 
+F Statistic & 333.772$^{***}$ (df = 3; 5400) & 472.413$^{***}$ (df = 3; 10859) & 893.796$^{***}$ (df = 3; 16234) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table}
+
+\begin{table}[!htbp] \centering 
+  \caption{Régressions linéaires supplémentaires de l'analyse 2 :} 
+  \label{} 
+\small 
+\begin{tabular}{@{\extracolsep{1pt}}lccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-4} 
+\\[-1.8ex] & \multicolumn{3}{c}{log(price)} \\ 
+\\[-1.8ex] & (1) & (2) & (3)\\ 
+\hline \\[-1.8ex] 
+ bedrooms & $-$0.004$^{**}$ & 0.009$^{***}$ & 0.008$^{***}$ \\ 
+  & (0.002) & (0.002) & (0.002) \\ 
+  bathrooms & 0.011$^{***}$ & 0.011$^{***}$ & 0.049$^{***}$ \\ 
+  & (0.003) & (0.003) & (0.004) \\ 
+  floors & $-$0.006$^{**}$ & 0.008$^{***}$ & $-$0.001 \\ 
+  & (0.003) & (0.003) & (0.004) \\ 
+  Constant & 12.857$^{***}$ & 13.122$^{***}$ & 12.897$^{***}$ \\ 
+  & (0.006) & (0.007) & (0.009) \\ 
+ \hline \\[-1.8ex] 
+Observations & 5,460 & 5,546 & 10,835 \\ 
+R$^{2}$ & 0.003 & 0.019 & 0.033 \\ 
+Adjusted R$^{2}$ & 0.002 & 0.019 & 0.033 \\ 
+Residual Std. Error & 0.100 (df = 5456) & 0.103 (df = 5542) & 0.192 (df = 10831) \\ 
+F Statistic & 5.536$^{***}$ (df = 3; 5456) & 36.286$^{***}$ (df = 3; 5542) & 122.607$^{***}$ (df = 3; 10831) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table}
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-30}Comparaison des performances des régressions linéaires supplémentaires de l'analyse 2}
+\centering
+\resizebox{\linewidth}{!}{
+\begin{tabular}[t]{llrrrrrrr}
+\toprule
+Name & Model & AIC & BIC & R2 & R2\_adjusted & RMSE & Sigma & Performance\_Score\\
+\midrule
+\cellcolor{gray!6}{model1} & \cellcolor{gray!6}{lm} & \cellcolor{gray!6}{-1928.296} & \cellcolor{gray!6}{-1895.322} & \cellcolor{gray!6}{0.156} & \cellcolor{gray!6}{0.156} & \cellcolor{gray!6}{0.202} & \cellcolor{gray!6}{0.202} & \cellcolor{gray!6}{0.717}\\
+model5 & lm & -9510.411 & -9477.307 & 0.019 & 0.019 & 0.103 & 0.103 & 0.695\\
+\cellcolor{gray!6}{model4} & \cellcolor{gray!6}{lm} & \cellcolor{gray!6}{-9656.521} & \cellcolor{gray!6}{-9623.495} & \cellcolor{gray!6}{0.003} & \cellcolor{gray!6}{0.002} & \cellcolor{gray!6}{0.100} & \cellcolor{gray!6}{0.100} & \cellcolor{gray!6}{0.667}\\
+model6 & lm & -4958.215 & -4921.762 & 0.033 & 0.033 & 0.192 & 0.192 & 0.515\\
+\cellcolor{gray!6}{model2} & \cellcolor{gray!6}{lm} & \cellcolor{gray!6}{1859.896} & \cellcolor{gray!6}{1896.362} & \cellcolor{gray!6}{0.115} & \cellcolor{gray!6}{0.115} & \cellcolor{gray!6}{0.263} & \cellcolor{gray!6}{0.264} & \cellcolor{gray!6}{0.474}\\
+\addlinespace
+model3 & lm & 9783.224 & 9821.699 & 0.142 & 0.142 & 0.327 & 0.327 & 0.302\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\newpage
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-31}Tests de l'analyse des résidus du modèle 1 :}
+\centering
+\begin{tabular}[t]{lrrr}
+\toprule
+  & Harrison\_McCabe & Breusch\_Pagan & Durbin\_Watson\\
+\midrule
+\cellcolor{gray!6}{p-value} & \cellcolor{gray!6}{0.096} & \cellcolor{gray!6}{0.000} & \cellcolor{gray!6}{0.410}\\
+statistic & 0.487 & 407.933 & 1.994\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-31}Tests de l'analyse des résidus du modèle 2 :}
+\centering
+\begin{tabular}[t]{lrrr}
+\toprule
+  & Harrison\_McCabe & Breusch\_Pagan & Durbin\_Watson\\
+\midrule
+\cellcolor{gray!6}{p-value} & \cellcolor{gray!6}{0.917} & \cellcolor{gray!6}{0.000} & \cellcolor{gray!6}{0.418}\\
+statistic & 0.510 & 849.865 & 1.996\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-31}Tests de l'analyse des résidus du modèle 3 :}
+\centering
+\begin{tabular}[t]{lrrr}
+\toprule
+  & Harrison\_McCabe & Breusch\_Pagan & Durbin\_Watson\\
+\midrule
+\cellcolor{gray!6}{p-value} & \cellcolor{gray!6}{0.980} & \cellcolor{gray!6}{0.000} & \cellcolor{gray!6}{0.183}\\
+statistic & 0.512 & 802.932 & 1.986\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-31}Tests de l'analyse des résidus du modèle 4 :}
+\centering
+\begin{tabular}[t]{lrrr}
+\toprule
+  & Harrison\_McCabe & Breusch\_Pagan & Durbin\_Watson\\
+\midrule
+\cellcolor{gray!6}{p-value} & \cellcolor{gray!6}{0.706} & \cellcolor{gray!6}{0.553} & \cellcolor{gray!6}{0.336}\\
+statistic & 0.505 & 2.093 & 1.989\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-31}Tests de l'analyse des résidus du modèle 5 :}
+\centering
+\begin{tabular}[t]{lrrr}
+\toprule
+  & Harrison\_McCabe & Breusch\_Pagan & Durbin\_Watson\\
+\midrule
+\cellcolor{gray!6}{p-value} & \cellcolor{gray!6}{0.474} & \cellcolor{gray!6}{0.062} & \cellcolor{gray!6}{0.872}\\
+statistic & 0.499 & 7.343 & 2.031\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-31}Tests de l'analyse des résidus du modèle 6 :}
+\centering
+\begin{tabular}[t]{lrrr}
+\toprule
+  & Harrison\_McCabe & Breusch\_Pagan & Durbin\_Watson\\
+\midrule
+\cellcolor{gray!6}{p-value} & \cellcolor{gray!6}{0.385} & \cellcolor{gray!6}{0.000} & \cellcolor{gray!6}{0.480}\\
+statistic & 0.498 & 51.599 & 1.999\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\newpage
+
+\begin{figure}
+\centering
+\includegraphics[width=1\textwidth,height=\textheight]{plot (11).png}
+\caption{Graphiques de l'analyse des résidus}
+\end{figure}
+
+\[\mathcal{M}_{1}^{A}:\log(y_{i})=\alpha+\beta_{4}x_{i,4}+\beta_{5}x_{i,5}+\beta_{8}x_{i,8}+z_{i} \iff \mathcal{M}_{1}^{A}:\log(y_{i})=12,11+0,023x_{i,4}+0,106x_{i,5}+0,044x_{i,8}+z_{i}\]
+
+En conclusion, nous conservons les hypothèses d'absence
+d'autocorrélation et nous en déduisons que les résidus ne sont pas
+autocorrélés au seuil de 0,1\% dans les modèles 1, 2, 3, 4, 5 et 6. De
+manière biaisé par les graphiques de l'analyse des résidus qui ne sont
+pas bons, nous avons 0,1\% de chance de se tromper en affirmant que plus
+le nombre de chambres, le nombre de salles de bain et le nombre d'étages
+sont élevés et plus le prix des logements est élevé selon la relation
+\(\mathcal{M}_{1}^{A}\).
+
+\newpage
+
+\hypertarget{mathcala_3-lanalyse-du-prix-dun-logement-uxe0-partir-de-645-000-dollars-en-fonction-de-sa-vue-sur-la-mer-ou-non-de-son-point-de-vue-et-de-son}{%
+\section{\texorpdfstring{\(\mathcal{A}_{3}\) : l'analyse du prix d'un
+logement à partir de 645 000 dollars en fonction de sa vue sur la mer ou
+non, de son point de vue et de son
+\textit{design}}{\textbackslash mathcal\{A\}\_\{3\} : l'analyse du prix d'un logement à partir de 645 000 dollars en fonction de sa vue sur la mer ou non, de son point de vue et de son }}\label{mathcala_3-lanalyse-du-prix-dun-logement-uxe0-partir-de-645-000-dollars-en-fonction-de-sa-vue-sur-la-mer-ou-non-de-son-point-de-vue-et-de-son}}
+
+Nous allons essayer d'analyser le \textit{standing} dont nous avons
+parlé dans le \textbf{4.4}. Par conséquent, nous allons segmenter la
+base de données \texttt{BDD\_data.csv} en ne prenant en compte que les
+logements coûtant plus de 645 000 dollars.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{data.analyse3 <-}\StringTok{ }\NormalTok{data[ data}\OperatorTok{$}\NormalTok{price }\OperatorTok{>=}\StringTok{ }\DecValTok{645000}\NormalTok{, ]}
+\end{Highlighting}
+\end{Shaded}
+
+\[\mathcal{A}_{3}=\{\mathcal{M}_{1},\mathcal{M}_{2},\mathcal{M}_{3},\mathcal{M}_{4}\}\]
+
+\begin{table}[!htbp] \centering 
+  \caption{Régressions linéaires de l'analyse 3 :} 
+  \label{} 
+\small 
+\begin{tabular}{@{\extracolsep{1pt}}lcc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{2}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-3} 
+\\[-1.8ex] & log(price) & price \\ 
+\\[-1.8ex] & (1) & (2)\\ 
+\hline \\[-1.8ex] 
+ waterfront2 & 0.332$^{***}$ & 600,302.300$^{***}$ \\ 
+  & (0.027) & (37,981.760) \\ 
+  view2 & 0.130$^{***}$ & 166,096.600$^{***}$ \\ 
+  & (0.019) & (26,035.900) \\ 
+  view3 & 0.096$^{***}$ & 104,150.500$^{***}$ \\ 
+  & (0.012) & (16,487.350) \\ 
+  view4 & 0.172$^{***}$ & 190,977.600$^{***}$ \\ 
+  & (0.014) & (20,029.270) \\ 
+  view5 & 0.238$^{***}$ & 288,291.500$^{***}$ \\ 
+  & (0.019) & (27,054.850) \\ 
+  grade5 & 0.182 & 230,233.800 \\ 
+  & (0.134) & (186,647.300) \\ 
+  grade6 & 0.220$^{*}$ & 306,892.500$^{*}$ \\ 
+  & (0.127) & (176,938.000) \\ 
+  grade7 & 0.278$^{**}$ & 356,616.400$^{**}$ \\ 
+  & (0.127) & (176,638.200) \\ 
+  grade8 & 0.382$^{***}$ & 464,067.200$^{***}$ \\ 
+  & (0.127) & (176,627.800) \\ 
+  grade9 & 0.540$^{***}$ & 651,744.500$^{***}$ \\ 
+  & (0.127) & (176,730.900) \\ 
+  grade10 & 0.789$^{***}$ & 996,335.500$^{***}$ \\ 
+  & (0.127) & (177,236.000) \\ 
+  grade11 & 1.094$^{***}$ & 1,591,935.000$^{***}$ \\ 
+  & (0.129) & (180,065.100) \\ 
+  grade12 & 1.644$^{***}$ & 3,174,180.000$^{***}$ \\ 
+  & (0.145) & (201,539.200) \\ 
+  Constant & 13.280$^{***}$ & 415,491.000$^{**}$ \\ 
+  & (0.127) & (176,509.000) \\ 
+ \hline \\[-1.8ex] 
+Observations & 5,413 & 5,413 \\ 
+R$^{2}$ & 0.444 & 0.454 \\ 
+Adjusted R$^{2}$ & 0.443 & 0.452 \\ 
+Residual Std. Error (df = 5399) & 0.253 & 352,169.000 \\ 
+F Statistic (df = 13; 5399) & 331.901$^{***}$ & 344.646$^{***}$ \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{2}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table}
+
+\begin{table}[!htbp] \centering 
+  \caption{Régressions linéaires de l'analyse 3 :} 
+  \label{} 
+\small 
+\begin{tabular}{@{\extracolsep{1pt}}lcc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{2}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-3} 
+\\[-1.8ex] & log(price) & price \\ 
+\\[-1.8ex] & (1) & (2)\\ 
+\hline \\[-1.8ex] 
+ log(sqft\_living) & 0.310$^{***}$ &  \\ 
+  & (0.014) &  \\ 
+  sqft\_living &  & 177.778$^{***}$ \\ 
+  &  & (6.344) \\ 
+  waterfront2 & 0.329$^{***}$ & 589,476.800$^{***}$ \\ 
+  & (0.026) & (35,493.090) \\ 
+  view2 & 0.119$^{***}$ & 145,610.000$^{***}$ \\ 
+  & (0.018) & (24,339.490) \\ 
+  view3 & 0.084$^{***}$ & 82,137.050$^{***}$ \\ 
+  & (0.011) & (15,426.160) \\ 
+  view4 & 0.155$^{***}$ & 157,060.900$^{***}$ \\ 
+  & (0.014) & (18,754.880) \\ 
+  view5 & 0.217$^{***}$ & 244,800.600$^{***}$ \\ 
+  & (0.019) & (25,328.230) \\ 
+  grade5 & 0.106 & 158,734.500 \\ 
+  & (0.129) & (174,426.000) \\ 
+  grade6 & 0.032 & 114,381.100 \\ 
+  & (0.122) & (165,477.400) \\ 
+  grade7 & 0.030 & 92,888.610 \\ 
+  & (0.122) & (165,322.700) \\ 
+  grade8 & 0.073 & 106,255.900 \\ 
+  & (0.122) & (165,538.000) \\ 
+  grade9 & 0.180 & 199,861.400 \\ 
+  & (0.123) & (165,926.500) \\ 
+  grade10 & 0.365$^{***}$ & 398,163.300$^{**}$ \\ 
+  & (0.123) & (166,982.900) \\ 
+  grade11 & 0.609$^{***}$ & 810,832.700$^{***}$ \\ 
+  & (0.126) & (170,549.600) \\ 
+  grade12 & 1.064$^{***}$ & 2,036,456.000$^{***}$ \\ 
+  & (0.141) & (192,648.700) \\ 
+  Constant & 11.114$^{***}$ & 243,224.000 \\ 
+  & (0.156) & (165,048.300) \\ 
+ \hline \\[-1.8ex] 
+Observations & 5,413 & 5,413 \\ 
+R$^{2}$ & 0.490 & 0.523 \\ 
+Adjusted R$^{2}$ & 0.489 & 0.522 \\ 
+Residual Std. Error (df = 5398) & 0.242 & 329,074.400 \\ 
+F Statistic (df = 14; 5398) & 370.816$^{***}$ & 422.624$^{***}$ \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{2}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table}
+
+\newpage
+
+\hypertarget{analyse-des-ruxe9sultats-3}{%
+\subsection{Analyse des résultats}\label{analyse-des-ruxe9sultats-3}}
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-34}Comparaison des performances des régressions linéaires de l'analyse 3}
+\centering
+\resizebox{\linewidth}{!}{
+\begin{tabular}[t]{llrrrrrrr}
+\toprule
+Name & Model & AIC & BIC & R2 & R2\_adjusted & RMSE & Sigma & Performance\_Score\\
+\midrule
+\cellcolor{gray!6}{model3} & \cellcolor{gray!6}{lm} & \cellcolor{gray!6}{36.558} & \cellcolor{gray!6}{142.103} & \cellcolor{gray!6}{0.490} & \cellcolor{gray!6}{0.489} & \cellcolor{gray!6}{0.242} & \cellcolor{gray!6}{0.242} & \cellcolor{gray!6}{0.862}\\
+model1 & lm & 502.793 & 601.741 & 0.444 & 0.443 & 0.253 & 0.253 & 0.666\\
+\cellcolor{gray!6}{model4} & \cellcolor{gray!6}{lm} & \cellcolor{gray!6}{152912.336} & \cellcolor{gray!6}{153017.881} & \cellcolor{gray!6}{0.523} & \cellcolor{gray!6}{0.522} & \cellcolor{gray!6}{328618.144} & \cellcolor{gray!6}{329074.410} & \cellcolor{gray!6}{0.357}\\
+model2 & lm & 153645.636 & 153744.584 & 0.454 & 0.452 & 351713.255 & 352168.968 & 0.039\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{quote}
+\[\mathcal{M}_{1}:\log(y_{i})=\alpha+\beta_{9}x_{i,9}+\beta_{10}x_{i,10}+\beta_{12}x_{i,12}+z_{i}\]
+\end{quote}
+
+Nous allons analyser le modèle 1.
+
+Pour \(\alpha\), nous avons moins de 0,1\% de chance de se tromper en
+rejetant l'hypothèse nulle. Par conséquent, nous rejetons l'hypothèse
+nulle et nous en déduisons que la constante du modèle 1 est différente
+de 0 au seuil de 0,1\%.
+
+Pour \(\beta_{9}^{1}\), nous avons moins de 0,1\% de chance de se
+tromper en rejetant l'hypothèse nulle. Par conséquent, nous rejetons
+l'hypothèse nulle et nous en déduisons que le coefficient du modèle 1 de
+la variable explicative \texttt{waterfront1} est différent de 0 au seuil
+de 0,1\%.
+
+Pour \(\beta_{10}^{2,3,4,5}\), nous avons moins de 0,1\% de chance de se
+tromper en rejetant l'hypothèse nulle. Par conséquent, nous rejetons
+l'hypothèse nulle et nous en déduisons que les coefficients du modèle 1
+des variables explicatives \texttt{view2}, \texttt{view3},
+\texttt{view4} et \texttt{view5} sont différents de 0 au seuil de 0,1\%.
+
+Pour \(\beta_{12}^{6,7,8,9}\), nous avons entre 0,3\% et 17,6\% de
+chance de se tromper en rejetant l'hypothèse nulle. Par conséquent, nous
+conservons l'hypothèse nulle et nous en déduisons que les coefficients
+du modèle 1 des variables explicatives \texttt{grade6}, \texttt{grade7},
+\texttt{grade8} et \texttt{grade9} sont égales à 0 au seuil de 0,1\%.
+
+Pour \(\beta_{12}^{10,11,12,13}\), nous avons moins de 0,1\% de chance
+de se tromper en rejetant l'hypothèse nulle. Par conséquent, nous
+rejetons l'hypothèse nulle et nous en déduisons que les coefficients du
+modèle 1 des variables explicatives \texttt{grade10}, \texttt{grade11},
+\texttt{grade12} et \texttt{grade13} sont différents de 0 au seuil de
+0,1\%.
+
+Nous avons \(R^{2}=0.444\) dans le modèle 1 donc 44,4\% de la variation
+du prix des logements est expliquée par le point de vue, la vue sur la
+mer et le \textit{design} de ces derniers.
+
+Pour \(F\), nous avons moins de 0,1\% de chance de se tromper en
+rejetant l'hypothèse d'absence globale de significativité. Par
+conséquent, nous rejetons l'hypothèse d'absence globale de
+significativité et nous en déduisons que le modèle 1 est globalement
+avéré au seuil de 0,1\%.
+
+\newpage
+
+\hypertarget{analyse-des-ruxe9sidus-3}{%
+\subsection{Analyse des résidus}\label{analyse-des-ruxe9sidus-3}}
+
+\begin{center}\includegraphics{E2-L3S2--1-_files/figure-latex/data.figure9-1} \end{center}
+
+\begin{figure}
+\centering
+\includegraphics[width=1\textwidth,height=\textheight]{plot (5).png}
+\caption{Graphiques de l'analyse des résidus}
+\end{figure}
+
+\newpage
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-35}Tests de l'analyse des résidus :}
+\centering
+\begin{tabular}[t]{lrrr}
+\toprule
+  & Harrison\_McCabe & Breusch\_Pagan & Durbin\_Watson\\
+\midrule
+\cellcolor{gray!6}{p-value} & \cellcolor{gray!6}{0.079} & \cellcolor{gray!6}{0.000} & \cellcolor{gray!6}{0.084}\\
+statistic & 0.486 & 462.261 & 1.963\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Pour \(DW\), nous avons 8,37\% de chance de se tomper en rejetant
+l'hypothèse d'absence d'autocorrélation. Par conséquent, nous conservons
+l'hypothèse d'absence d'autocorrélation et nous en déduisons que les
+résidus ne sont pas autocorrélés au seuil de 0,1\%.
+
+Nous observons que les résidus ne sont globalement pas répartis le long
+de la droite. Néanmoins, nous en déduisons que les résidus suivent une
+loi normale.
+
+Pour \(BP\), nous avons moins de 0,1\% de chance de se tomper en
+rejetant l'hypothèse d'homoscédasticité. Par conséquent, nous rejetons
+l'hypothèse d'homoscédasticité et nous en déduisons que les résidus sont
+hétéroscédastiques au seuil de 0,1\%.
+
+Nous observons l'existence de résidus qui ne sont globalement pas
+linéaires et qui tendent vers la distance de Cook. Nous en déduisons
+que, dans une moindre mesure, les logements 21051, 12778, 10447, 8639,
+7253 et 3915 ont un résidu aberrant.
+
+Les hypothèses nécessaires des résultats et des résidus sont avérés au
+seuil de 0,1\%. Notre constante, notre coefficient, notre
+significativité, notre linéarité des résidus, notre absence
+d'autocorrélation des résidus et notre appartenance à une loi normale
+des résidus sont avérés au seuil de 0,1\%. L'hypothèse
+d'hétéroscédasticité ne pose pas de problème car le prix des logements
+et la variance du prix des logements ne sont pas homogènes
+\textbf{notamment} pour les logements coûtant plus de 645 000 dollars.
+
+En conclusion, nous avons 0,1\% de chance de se tromper en affirmant que
+plus le point de vue est beau et plus le \textit{design} est classe et
+plus le prix des logements les logements coûtant plus de 645 000 dollars
+est élevé selon la relation \(\mathcal{M}_{1}\).
+
+\newpage
+
+\hypertarget{mathcala_4-lanalyse-du-prix-dun-logement-en-fonction-de-son-uxe9tat}{%
+\section{\texorpdfstring{\(\mathcal{A}_{4}\) : l'analyse du prix d'un
+logement en fonction de son
+état}{\textbackslash mathcal\{A\}\_\{4\} : l'analyse du prix d'un logement en fonction de son état}}\label{mathcala_4-lanalyse-du-prix-dun-logement-en-fonction-de-son-uxe9tat}}
+
+\begin{table}[!htbp] \centering 
+  \caption{Régressions linéaires de l'analyse 4 :} 
+  \label{} 
+\small 
+\begin{tabular}{@{\extracolsep{1pt}}lcc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{2}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-3} 
+\\[-1.8ex] & log(price) & price \\ 
+\\[-1.8ex] & (1) & (2)\\ 
+\hline \\[-1.8ex] 
+ condition2 & 0.047 & $-$7,144.521 \\ 
+  & (0.103) & (72,395.060) \\ 
+  condition3 & 0.565$^{***}$ & 207,580.900$^{***}$ \\ 
+  & (0.096) & (66,874.610) \\ 
+  condition4 & 0.521$^{***}$ & 186,768.700$^{***}$ \\ 
+  & (0.096) & (66,979.450) \\ 
+  condition5 & 0.667$^{***}$ & 277,986.400$^{***}$ \\ 
+  & (0.096) & (67,389.750) \\ 
+  Constant & 12.491$^{***}$ & 334,431.700$^{***}$ \\ 
+  & (0.095) & (66,803.230) \\ 
+ \hline \\[-1.8ex] 
+Observations & 21,613 & 21,613 \\ 
+R$^{2}$ & 0.014 & 0.007 \\ 
+Adjusted R$^{2}$ & 0.014 & 0.007 \\ 
+Residual Std. Error (df = 21608) & 0.523 & 365,896.400 \\ 
+F Statistic (df = 4; 21608) & 75.880$^{***}$ & 37.412$^{***}$ \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{2}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table}
+
+\begin{table}[!htbp] \centering 
+  \caption{Régressions linéaires de l'analyse 4 :} 
+  \label{} 
+\small 
+\begin{tabular}{@{\extracolsep{1pt}}lcc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{2}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-3} 
+\\[-1.8ex] & log(price) & price \\ 
+\\[-1.8ex] & (1) & (2)\\ 
+\hline \\[-1.8ex] 
+ log(sqft\_living) & 0.837$^{***}$ &  \\ 
+  & (0.006) &  \\ 
+  sqft\_living &  & 282.642$^{***}$ \\ 
+  &  & (1.938) \\ 
+  condition2 & $-$0.089 & $-$61,993.580 \\ 
+  & (0.076) & (51,394.280) \\ 
+  condition3 & 0.073 & $-$56,136.330 \\ 
+  & (0.071) & (47,508.390) \\ 
+  condition4 & 0.101 & $-$20,971.100 \\ 
+  & (0.071) & (47,569.710) \\ 
+  condition5 & 0.220$^{***}$ & 49,919.100 \\ 
+  & (0.071) & (47,865.210) \\ 
+  Constant & 6.635$^{***}$ & $-$9,261.488 \\ 
+  & (0.083) & (47,481.810) \\ 
+ \hline \\[-1.8ex] 
+Observations & 21,613 & 21,613 \\ 
+R$^{2}$ & 0.462 & 0.500 \\ 
+Adjusted R$^{2}$ & 0.462 & 0.499 \\ 
+Residual Std. Error (df = 21607) & 0.386 & 259,748.100 \\ 
+F Statistic (df = 5; 21607) & 3,711.535$^{***}$ & 4,313.423$^{***}$ \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{2}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table}
+
+\newpage
+
+\hypertarget{analyse-des-ruxe9sultats-4}{%
+\subsection{Analyse des résultats}\label{analyse-des-ruxe9sultats-4}}
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-37}Comparaison des performances des régressions linéaires de l'analyse 4}
+\centering
+\resizebox{\linewidth}{!}{
+\begin{tabular}[t]{llrrrrrrr}
+\toprule
+Name & Model & AIC & BIC & R2 & R2\_adjusted & RMSE & Sigma & Performance\_Score\\
+\midrule
+\cellcolor{gray!6}{model3} & \cellcolor{gray!6}{lm} & \cellcolor{gray!6}{20234.11} & \cellcolor{gray!6}{20289.98} & \cellcolor{gray!6}{0.462} & \cellcolor{gray!6}{0.462} & \cellcolor{gray!6}{0.386} & \cellcolor{gray!6}{0.386} & \cellcolor{gray!6}{0.975}\\
+model1 & lm & 33330.06 & 33377.94 & 0.014 & 0.014 & 0.523 & 0.523 & 0.664\\
+\cellcolor{gray!6}{model4} & \cellcolor{gray!6}{lm} & \cellcolor{gray!6}{600261.78} & \cellcolor{gray!6}{600317.65} & \cellcolor{gray!6}{0.500} & \cellcolor{gray!6}{0.499} & \cellcolor{gray!6}{259711.998} & \cellcolor{gray!6}{259748.055} & \cellcolor{gray!6}{0.438}\\
+model2 & lm & 615071.65 & 615119.54 & 0.007 & 0.007 & 365854.028 & 365896.354 & 0.000\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+Nous allons analyser le modèle 1.
+
+\begin{quote}
+\[\mathcal{M}_{1}:\log(y_{i})=\alpha+\beta_{11}x_{i,11}+z_{i}\]
+\end{quote}
+
+Pour \(\alpha\), nous avons moins de 0,1\% de chance de se tromper en
+rejetant l'hypothèse nulle. Par conséquent, nous rejetons l'hypothèse
+nulle et nous en déduisons que la constante du modèle 1 est différente
+de 0 au seuil de 0,1\%.
+
+Pour \(\beta_{11}^{2}\), nous avons 65\% de chance de se tromper en
+rejetant l'hypothèse nulle. Par conséquent, nous conservons l'hypothèse
+nulle et nous en déduisons que le coefficient du modèle 1 de la variable
+explicative \texttt{condition2} est égale à 0 au seuil de 0,1\%.
+
+Pour \(\beta_{11}^{3,4,5}\), nous avons moins de 0,1\% de chance de se
+tromper en rejetant l'hypothèse nulle. Par conséquent, nous rejetons
+l'hypothèse nulle et nous en déduisons que les coefficients du modèle 1
+des variables explicatives \texttt{condition3}, \texttt{condition4} et
+\texttt{condition5} sont différents de 0 au seuil de 0,1\%.
+
+Nous avons \(R^{2}=0.014\) dans le modèle 1 donc 1.4\% de la variation
+du prix des logements est expliquée par l'état de ces derniers.
+
+Pour \(F\), nous avons moins de 0,1\% de chance de se tromper en
+rejetant l'hypothèse d'absence globale de significativité. Par
+conséquent, nous rejetons l'hypothèse d'absence globale de
+significativité et nous en déduisons que le modèle 1 est globalement
+avéré au seuil de 0,1\%.
+
+\newpage
+
+\hypertarget{analyse-des-ruxe9sidus-4}{%
+\subsection{Analyse des résidus}\label{analyse-des-ruxe9sidus-4}}
+
+\begin{center}\includegraphics{E2-L3S2--1-_files/figure-latex/data.figure10-1} \end{center}
+
+\begin{figure}
+\centering
+\includegraphics[width=1\textwidth,height=\textheight]{plot (8).png}
+\caption{Graphiques de l'analyse des résidus}
+\end{figure}
+
+\newpage
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-38}Tests de l'analyse des résidus :}
+\centering
+\begin{tabular}[t]{lrrr}
+\toprule
+  & Harrison\_McCabe & Breusch\_Pagan & Durbin\_Watson\\
+\midrule
+\cellcolor{gray!6}{p-value} & \cellcolor{gray!6}{0.366} & \cellcolor{gray!6}{0.000} & \cellcolor{gray!6}{0.001}\\
+statistic & 0.498 & 21.666 & 1.959\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Pour \(DW\), nous avons 0,1\% de chance de se tomper en rejetant
+l'hypothèse d'absence d'autocorrélation. Par conséquent, nous rejetons
+l'hypothèse d'absence d'autocorrélation et nous en déduisons que les
+résidus sont autocorrélés au seuil de 0,1\%.
+
+Nous observons que les résidus ne sont globalement pas répartis le long
+de la droite. Néanmoins, nous en déduisons que les résidus suivent une
+loi normale.
+
+Pour \(BP\), nous avons moins de 0,1\% de chance de se tomper en
+rejetant l'hypothèse d'homoscédasticité. Par conséquent, nous rejetons
+l'hypothèse d'homoscédasticité et nous en déduisons que les résidus sont
+hétéroscédastiques au seuil de 0,1\%.
+
+Nous observons l'existence de résidus qui ne sont globalement pas
+linéaires et qui tendent vers la distance de Cook. Nous en déduisons
+que, dans une moindre mesure, les logements 19294, 18877, 16199, 9255,
+7253 et 3915 ont un résidu aberrant.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{data.analyse4 <-}\StringTok{ }\NormalTok{data[ }\OperatorTok{-}\StringTok{ }\KeywordTok{c}\NormalTok{( }\DecValTok{19294}\NormalTok{,}
+                            \DecValTok{18877}\NormalTok{,}
+                            \DecValTok{16199}\NormalTok{,}
+                            \DecValTok{9255}\NormalTok{,}
+                            \DecValTok{7253}\NormalTok{,}
+                            \DecValTok{3915}\NormalTok{ ), ]}
+\end{Highlighting}
+\end{Shaded}
+
+Les hypothèses nécessaires des résultats sont avérés au seuil de 0,1\%.
+Néanmoins les hypothèses nécessaires des résidus ne sont pas avérés au
+seuil de 0,1\%. L'hypothèse d'hétéroscédasticité ne pose pas de problème
+car le prix des logements et la variance du prix des logements ne sont
+pas homogènes mais l'hypothèse d'autocorrélation pose un problème car
+les résidus ne sont pas linéaires et aléatoires.
+
+\newpage
+
+\hypertarget{mathcala_4h-lanalyse-de-lautocorruxe9lation}{%
+\subsection{\texorpdfstring{\(\mathcal{A}_{4}^{H}\) : l'analyse de
+l'autocorrélation}{\textbackslash mathcal\{A\}\_\{4\}\^{}\{H\} : l'analyse de l'autocorrélation}}\label{mathcala_4h-lanalyse-de-lautocorruxe9lation}}
+
+Nous allons essayer de conserver l'hypothèse d'autocorrélation des
+résidus en segmentant le prix des logements. Nous allons créer de
+nouvelles bases de données en fonction du minimum, du maximum et de la
+médiane :
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{data.analyse4.min_q1 <-}\StringTok{ }\NormalTok{data.analyse4[ data.analyse4}\OperatorTok{$}\NormalTok{price }\OperatorTok{>=}\StringTok{ }\DecValTok{75000} \OperatorTok{&}
+\StringTok{                                         }\NormalTok{data.analyse4}\OperatorTok{$}\NormalTok{price }\OperatorTok{<=}\StringTok{ }\DecValTok{321950}\NormalTok{, ]}\CommentTok{# modèle 1,}
+
+\NormalTok{data.analyse4.min_q2 <-}\StringTok{ }\NormalTok{data.analyse4[ data.analyse4}\OperatorTok{$}\NormalTok{price }\OperatorTok{>=}\StringTok{ }\DecValTok{75000} \OperatorTok{&}
+\StringTok{                                         }\NormalTok{data.analyse4}\OperatorTok{$}\NormalTok{price }\OperatorTok{<=}\StringTok{ }\DecValTok{450000}\NormalTok{, ]}\CommentTok{# modèle 2,}
+
+\NormalTok{data.analyse4.min_q3 <-}\StringTok{ }\NormalTok{data.analyse4[ data.analyse4}\OperatorTok{$}\NormalTok{price }\OperatorTok{>=}\StringTok{ }\DecValTok{75000} \OperatorTok{&}
+\StringTok{                                         }\NormalTok{data.analyse4}\OperatorTok{$}\NormalTok{price }\OperatorTok{<=}\StringTok{ }\DecValTok{645000}\NormalTok{, ]}\CommentTok{# modèle 3,}
+
+\NormalTok{data.analyse4.q1_q2 <-}\StringTok{ }\NormalTok{data.analyse4[ data.analyse4}\OperatorTok{$}\NormalTok{price }\OperatorTok{>=}\StringTok{ }\DecValTok{321950} \OperatorTok{&}
+\StringTok{                                        }\NormalTok{data.analyse4}\OperatorTok{$}\NormalTok{price }\OperatorTok{<=}\StringTok{ }\DecValTok{450000}\NormalTok{, ]}\CommentTok{# modèle 4,}
+
+\NormalTok{data.analyse4.q2_q3 <-}\StringTok{ }\NormalTok{data.analyse4[ data.analyse4}\OperatorTok{$}\NormalTok{price }\OperatorTok{>=}\StringTok{ }\DecValTok{450000} \OperatorTok{&}
+\StringTok{                                        }\NormalTok{data.analyse4}\OperatorTok{$}\NormalTok{price }\OperatorTok{<=}\StringTok{ }\DecValTok{645000}\NormalTok{, ]}\CommentTok{# modèle 5,}
+
+\NormalTok{data.analyse4.q1_q3 <-}\StringTok{ }\NormalTok{data.analyse4[ data.analyse4}\OperatorTok{$}\NormalTok{price }\OperatorTok{>=}\StringTok{ }\DecValTok{321950} \OperatorTok{&}
+\StringTok{                                        }\NormalTok{data.analyse4}\OperatorTok{$}\NormalTok{price }\OperatorTok{<=}\StringTok{ }\DecValTok{645000}\NormalTok{, ]}\CommentTok{# modèle 6,}
+\end{Highlighting}
+\end{Shaded}
+
+\newpage
+
+\[\mathcal{A}_{1}^{A}=\{\mathcal{M}_{1}^{A},\mathcal{M}_{2}^{A},\mathcal{M}_{3}^{A},\mathcal{M}_{4}^{A},\mathcal{M}_{5}^{A},\mathcal{M}_{6}^{A}\}\]
+
+\begin{table}[!htbp] \centering 
+  \caption{Régressions linéaires supplémentaires de l'analyse 4 :} 
+  \label{} 
+\small 
+\begin{tabular}{@{\extracolsep{1pt}}lccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-4} 
+\\[-1.8ex] & \multicolumn{3}{c}{log(price)} \\ 
+\\[-1.8ex] & (1) & (2) & (3)\\ 
+\hline \\[-1.8ex] 
+ condition2 & 0.119$^{**}$ & 0.023 & 0.033 \\ 
+  & (0.057) & (0.061) & (0.073) \\ 
+  condition3 & 0.320$^{***}$ & 0.314$^{***}$ & 0.397$^{***}$ \\ 
+  & (0.053) & (0.057) & (0.067) \\ 
+  condition4 & 0.305$^{***}$ & 0.274$^{***}$ & 0.360$^{***}$ \\ 
+  & (0.053) & (0.057) & (0.068) \\ 
+  condition5 & 0.311$^{***}$ & 0.293$^{***}$ & 0.407$^{***}$ \\ 
+  & (0.054) & (0.058) & (0.068) \\ 
+  Constant & 12.104$^{***}$ & 12.339$^{***}$ & 12.438$^{***}$ \\ 
+  & (0.053) & (0.057) & (0.067) \\ 
+ \hline \\[-1.8ex] 
+Observations & 5,402 & 10,862 & 16,238 \\ 
+R$^{2}$ & 0.023 & 0.019 & 0.014 \\ 
+Adjusted R$^{2}$ & 0.022 & 0.019 & 0.014 \\ 
+Residual Std. Error & 0.217 (df = 5397) & 0.277 (df = 10857) & 0.350 (df = 16233) \\ 
+F Statistic & 31.480$^{***}$ (df = 4; 5397) & 53.388$^{***}$ (df = 4; 10857) & 59.000$^{***}$ (df = 4; 16233) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table}
+
+\begin{table}[!htbp] \centering 
+  \caption{Régressions linéaires supplémentaires de l'analyse 4 :} 
+  \label{} 
+\small 
+\begin{tabular}{@{\extracolsep{1pt}}lccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-4} 
+\\[-1.8ex] & \multicolumn{3}{c}{log(price)} \\ 
+\\[-1.8ex] & (1) & (2) & (3)\\ 
+\hline \\[-1.8ex] 
+ condition2 & $-$0.075$^{*}$ & $-$0.067 & $-$0.036 \\ 
+  & (0.042) & (0.064) & (0.067) \\ 
+  condition3 & $-$0.055 & $-$0.037 & 0.015 \\ 
+  & (0.038) & (0.060) & (0.062) \\ 
+  condition4 & $-$0.051 & $-$0.036 & 0.025 \\ 
+  & (0.038) & (0.060) & (0.062) \\ 
+  condition5 & $-$0.040 & $-$0.015 & 0.053 \\ 
+  & (0.038) & (0.060) & (0.062) \\ 
+  Constant & 12.911$^{***}$ & 13.223$^{***}$ & 13.004$^{***}$ \\ 
+  & (0.038) & (0.060) & (0.062) \\ 
+ \hline \\[-1.8ex] 
+Observations & 5,461 & 5,548 & 10,837 \\ 
+R$^{2}$ & 0.002 & 0.003 & 0.003 \\ 
+Adjusted R$^{2}$ & 0.001 & 0.003 & 0.002 \\ 
+Residual Std. Error & 0.100 (df = 5456) & 0.103 (df = 5543) & 0.195 (df = 10832) \\ 
+F Statistic & 2.590$^{**}$ (df = 4; 5456) & 4.740$^{***}$ (df = 4; 5543) & 7.714$^{***}$ (df = 4; 10832) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table}
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-42}Comparaison des performances des régressions linéaires supplémentaires de l'analyse 4}
+\centering
+\resizebox{\linewidth}{!}{
+\begin{tabular}[t]{llrrrrrrr}
+\toprule
+Name & Model & AIC & BIC & R2 & R2\_adjusted & RMSE & Sigma & Performance\_Score\\
+\midrule
+\cellcolor{gray!6}{model1} & \cellcolor{gray!6}{lm} & \cellcolor{gray!6}{-1155.893} & \cellcolor{gray!6}{-1116.326} & \cellcolor{gray!6}{0.023} & \cellcolor{gray!6}{0.022} & \cellcolor{gray!6}{0.217} & \cellcolor{gray!6}{0.217} & \cellcolor{gray!6}{0.713}\\
+model5 & lm & -9419.085 & -9379.357 & 0.003 & 0.003 & 0.103 & 0.103 & 0.683\\
+\cellcolor{gray!6}{model4} & \cellcolor{gray!6}{lm} & \cellcolor{gray!6}{-9648.516} & \cellcolor{gray!6}{-9608.884} & \cellcolor{gray!6}{0.002} & \cellcolor{gray!6}{0.001} & \cellcolor{gray!6}{0.100} & \cellcolor{gray!6}{0.100} & \cellcolor{gray!6}{0.667}\\
+model2 & lm & 2962.730 & 3006.488 & 0.019 & 0.019 & 0.277 & 0.277 & 0.517\\
+\cellcolor{gray!6}{model6} & \cellcolor{gray!6}{lm} & \cellcolor{gray!6}{-4624.939} & \cellcolor{gray!6}{-4581.194} & \cellcolor{gray!6}{0.003} & \cellcolor{gray!6}{0.002} & \cellcolor{gray!6}{0.195} & \cellcolor{gray!6}{0.195} & \cellcolor{gray!6}{0.480}\\
+\addlinespace
+model3 & lm & 12017.053 & 12063.224 & 0.014 & 0.014 & 0.350 & 0.350 & 0.202\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\newpage
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-43}Tests de l'analyse des résidus du modèle 1 :}
+\centering
+\begin{tabular}[t]{lrrr}
+\toprule
+  & Harrison\_McCabe & Breusch\_Pagan & Durbin\_Watson\\
+\midrule
+\cellcolor{gray!6}{p-value} & \cellcolor{gray!6}{0.048} & \cellcolor{gray!6}{0.000} & \cellcolor{gray!6}{0.006}\\
+statistic & 0.484 & 64.779 & 1.932\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-43}Tests de l'analyse des résidus du modèle 2 :}
+\centering
+\begin{tabular}[t]{lrrr}
+\toprule
+  & Harrison\_McCabe & Breusch\_Pagan & Durbin\_Watson\\
+\midrule
+\cellcolor{gray!6}{p-value} & \cellcolor{gray!6}{0.812} & \cellcolor{gray!6}{0.000} & \cellcolor{gray!6}{0.065}\\
+statistic & 0.506 & 84.047 & 1.971\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-43}Tests de l'analyse des résidus du modèle 3 :}
+\centering
+\begin{tabular}[t]{lrrr}
+\toprule
+  & Harrison\_McCabe & Breusch\_Pagan & Durbin\_Watson\\
+\midrule
+\cellcolor{gray!6}{p-value} & \cellcolor{gray!6}{0.893} & \cellcolor{gray!6}{0.000} & \cellcolor{gray!6}{0.027}\\
+statistic & 0.507 & 81.606 & 1.970\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-43}Tests de l'analyse des résidus du modèle 4 :}
+\centering
+\begin{tabular}[t]{lrrr}
+\toprule
+  & Harrison\_McCabe & Breusch\_Pagan & Durbin\_Watson\\
+\midrule
+\cellcolor{gray!6}{p-value} & \cellcolor{gray!6}{0.713} & \cellcolor{gray!6}{0.055} & \cellcolor{gray!6}{0.326}\\
+statistic & 0.505 & 9.260 & 1.988\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-43}Tests de l'analyse des résidus du modèle 5 :}
+\centering
+\begin{tabular}[t]{lrrr}
+\toprule
+  & Harrison\_McCabe & Breusch\_Pagan & Durbin\_Watson\\
+\midrule
+\cellcolor{gray!6}{p-value} & \cellcolor{gray!6}{0.441} & \cellcolor{gray!6}{0.048} & \cellcolor{gray!6}{0.900}\\
+statistic & 0.499 & 9.609 & 2.034\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-43}Tests de l'analyse des résidus du modèle 6 :}
+\centering
+\begin{tabular}[t]{lrrr}
+\toprule
+  & Harrison\_McCabe & Breusch\_Pagan & Durbin\_Watson\\
+\midrule
+\cellcolor{gray!6}{p-value} & \cellcolor{gray!6}{0.224} & \cellcolor{gray!6}{0.862} & \cellcolor{gray!6}{0.449}\\
+statistic & 0.495 & 1.297 & 1.998\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\newpage
+
+\begin{figure}
+\centering
+\includegraphics[width=1\textwidth,height=\textheight]{plot (12).png}
+\caption{Graphiques de l'analyse des résidus}
+\end{figure}
+
+En conclusion, nous conservons les hypothèses d'absence
+d'autocorrélation et nous en déduisons que les résidus ne sont pas
+autocorrélés au seuil de 0,1\% dans les modèles 1, 2, 3, 4, 5 et 6. De
+manière biaisé par les graphiques de l'analyse des résidus qui ne sont
+pas bons, nous avons 1\% de chance de se tromper en affirmant que plus
+les logements sont en bon état et plus le prix de ces derniers est élevé
+selon la relation \(\mathcal{M}_{1}^{A}\).
+
+\newpage
+
+\hypertarget{mathcala_5-lanalyse-du-prix-dun-logement-en-fonction-de-son-uxe2ge-de-construction-et-de-son-uxe2ge-de-ruxe9novation}{%
+\section{\texorpdfstring{\(\mathcal{A}_{5}\) : l'analyse du prix d'un
+logement en fonction de son âge de construction et de son âge de
+rénovation}{\textbackslash mathcal\{A\}\_\{5\} : l'analyse du prix d'un logement en fonction de son âge de construction et de son âge de rénovation}}\label{mathcala_5-lanalyse-du-prix-dun-logement-en-fonction-de-son-uxe2ge-de-construction-et-de-son-uxe2ge-de-ruxe9novation}}
+
+\begin{table}[!htbp] \centering 
+  \caption{Régressions linéaires de l'analyse 5 :} 
+  \label{} 
+\small 
+\begin{tabular}{@{\extracolsep{1pt}}lcc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{2}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-3} 
+\\[-1.8ex] & \multicolumn{2}{c}{price} \\ 
+\\[-1.8ex] & (1) & (2)\\ 
+\hline \\[-1.8ex] 
+ life\_built & $-$674.369$^{***}$ & $-$429.877$^{***}$ \\ 
+  & (84.893) & (131.956) \\ 
+  life\_renovated & $-$65.659 & 510.952$^{*}$ \\ 
+  & (160.771) & (287.429) \\ 
+  life\_built:life\_renovated &  & $-$13.282$^{**}$ \\ 
+  &  & (5.488) \\ 
+  Constant & 570,514.500$^{***}$ & 559,881.500$^{***}$ \\ 
+  & (5,352.348) & (6,924.413) \\ 
+ \hline \\[-1.8ex] 
+Observations & 21,613 & 21,613 \\ 
+R$^{2}$ & 0.003 & 0.003 \\ 
+Adjusted R$^{2}$ & 0.003 & 0.003 \\ 
+Residual Std. Error & 366,608.100 (df = 21610) & 366,566.900 (df = 21609) \\ 
+F Statistic & 31.625$^{***}$ (df = 2; 21610) & 23.040$^{***}$ (df = 3; 21609) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{2}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table}
+
+\begin{table}[!htbp] \centering 
+  \caption{Régressions linéaires de l'analyse 5 :} 
+  \label{} 
+\small 
+\begin{tabular}{@{\extracolsep{1pt}}lcc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{2}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-3} 
+\\[-1.8ex] & \multicolumn{2}{c}{log(price)} \\ 
+\\[-1.8ex] & (1) & (2)\\ 
+\hline \\[-1.8ex] 
+ life\_built & $-$0.001$^{***}$ & $-$0.001$^{***}$ \\ 
+  & (0.0001) & (0.0002) \\ 
+  life\_renovated & $-$0.0002 & 0.0004 \\ 
+  & (0.0002) & (0.0004) \\ 
+  life\_built:life\_renovated &  & $-$0.00001 \\ 
+  &  & (0.00001) \\ 
+  Constant & 13.113$^{***}$ & 13.103$^{***}$ \\ 
+  & (0.008) & (0.010) \\ 
+ \hline \\[-1.8ex] 
+Observations & 21,613 & 21,613 \\ 
+R$^{2}$ & 0.007 & 0.007 \\ 
+Adjusted R$^{2}$ & 0.006 & 0.006 \\ 
+Residual Std. Error & 0.525 (df = 21610) & 0.525 (df = 21609) \\ 
+F Statistic & 70.822$^{***}$ (df = 2; 21610) & 48.048$^{***}$ (df = 3; 21609) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{2}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table}
+
+\newpage
+
+\hypertarget{analyse-des-ruxe9sultats-5}{%
+\subsection{Analyse des résultats}\label{analyse-des-ruxe9sultats-5}}
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-45}Aperçu de la base de données de l'analyse 5 :}
+\centering
+\begin{tabular}[t]{lrrr}
+\toprule
+  & price & life\_built & life\_renovated\\
+\midrule
+\cellcolor{gray!6}{18130} & \cellcolor{gray!6}{382880} & \cellcolor{gray!6}{47} & \cellcolor{gray!6}{13}\\
+21026 & 727000 & 5 & 4\\
+\cellcolor{gray!6}{7946} & \cellcolor{gray!6}{237000} & \cellcolor{gray!6}{56} & \cellcolor{gray!6}{1}\\
+5269 & 495000 & 75 & 9\\
+\cellcolor{gray!6}{10116} & \cellcolor{gray!6}{555000} & \cellcolor{gray!6}{10} & \cellcolor{gray!6}{24}\\
+\addlinespace
+5396 & 299800 & 38 & 11\\
+\cellcolor{gray!6}{1569} & \cellcolor{gray!6}{789500} & \cellcolor{gray!6}{9} & \cellcolor{gray!6}{17}\\
+1407 & 300000 & 15 & 18\\
+\cellcolor{gray!6}{2236} & \cellcolor{gray!6}{220000} & \cellcolor{gray!6}{41} & \cellcolor{gray!6}{0}\\
+1682 & 1230000 & 13 & 32\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-46}Comparaison des performances des régressions linéaires de l'analyse 5}
+\centering
+\resizebox{\linewidth}{!}{
+\begin{tabular}[t]{llrrrrrrr}
+\toprule
+Name & Model & AIC & BIC & R2 & R2\_adjusted & RMSE & Sigma & Performance\_Score\\
+\midrule
+\cellcolor{gray!6}{model4} & \cellcolor{gray!6}{lm} & \cellcolor{gray!6}{33485.84} & \cellcolor{gray!6}{33525.75} & \cellcolor{gray!6}{0.007} & \cellcolor{gray!6}{0.006} & \cellcolor{gray!6}{0.525} & \cellcolor{gray!6}{0.525} & \cellcolor{gray!6}{1.000}\\
+model3 & lm & 33486.33 & 33518.26 & 0.007 & 0.006 & 0.525 & 0.525 & 0.992\\
+\cellcolor{gray!6}{model2} & \cellcolor{gray!6}{lm} & \cellcolor{gray!6}{615149.79} & \cellcolor{gray!6}{615189.70} & \cellcolor{gray!6}{0.003} & \cellcolor{gray!6}{0.003} & \cellcolor{gray!6}{366532.952} & \cellcolor{gray!6}{366566.875} & \cellcolor{gray!6}{0.022}\\
+model1 & lm & 615153.65 & 615185.57 & 0.003 & 0.003 & 366582.615 & 366608.060 & 0.000\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+Nous allons analyser le modèle 4.
+
+\[\mathcal{M}_{4}:\log(y_{i})=\alpha+\beta_{22}x_{i,22}+\beta_{23}x_{i,23}+\beta_{22.23}x_{i,22}x_{i,23}+z_{i}\]
+
+Pour \(\alpha\), nous avons moins de 0,1\% de chance de se tromper en
+rejetant l'hypothèse nulle. Par conséquent, nous rejetons l'hypothèse
+nulle et nous en déduisons que la constante du modèle 4 est différente
+de 0 au seuil de 0,1\%.
+
+Pour \(\beta_{22}\), nous avons moins de 0,1\% de chance de se tromper
+en rejetant l'hypothèse nulle. Par conséquent, nous rejetons l'hypothèse
+nulle et nous en déduisons que le coefficient du modèle 4 de la variable
+explicative \texttt{life\_built} est différent de 0 au seuil de 0,1\%.
+
+Pour \(\beta_{23}\), nous avons 34,6\% de chance de se tromper en
+rejetant l'hypothèse nulle. Par conséquent, nous conservons l'hypothèse
+nulle et nous en déduisons que le coefficient du modèle 4 de la variable
+explicative \texttt{life\_renovated} est égale à 0 au seuil de 0,1\%.
+
+Pour \(\beta_{22.23}\), nous avons 11,5\% de chance de se tromper en
+rejetant l'hypothèse nulle. Par conséquent, nous coonservons l'hypothèse
+nulle et nous en déduisons que le coefficient du modèle 4 de la variable
+explicative \texttt{life\_built.life\_renovated} est égale à 0 au seuil
+de 0,1\%.
+
+Nous avons \(R^{2}=0,007\) dans le modèle 4 donc 0,7\% de la variation
+du prix des logements est expliquée par la surface intérieure de ces
+derniers.
+
+Pour \(F\), nous avons moins de 0,1\% de chance de se tromper en
+rejetant l'hypothèse d'absence globale de significativité. Par
+conséquent, nous rejetons l'hypothèse d'absence globale de
+significativité et nous en déduisons que le modèle 4 est globalement
+avéré au seuil de 0,1\%.
+
+\newpage
+
+\hypertarget{analyse-des-ruxe9sidus-5}{%
+\subsection{Analyse des résidus}\label{analyse-des-ruxe9sidus-5}}
+
+\begin{center}\includegraphics{E2-L3S2--1-_files/figure-latex/data.figure11-1} \end{center}
+
+\begin{figure}
+\centering
+\includegraphics[width=1\textwidth,height=\textheight]{plot (9).png}
+\caption{Graphiques de l'analyse des résidus}
+\end{figure}
+
+\newpage
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-47}Tests de l'analyse des résidus :}
+\centering
+\begin{tabular}[t]{lrrr}
+\toprule
+  & Harrison\_McCabe & Breusch\_Pagan & Durbin\_Watson\\
+\midrule
+\cellcolor{gray!6}{p-value} & \cellcolor{gray!6}{0.458} & \cellcolor{gray!6}{0.000} & \cellcolor{gray!6}{0.005}\\
+statistic & 0.500 & 81.297 & 1.965\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Pour \(DW\) nous avons 0,5\% de chance de se tromper en rejetant
+l'hypothèse d'absence d'autocorrélation. Par conséquent, nous conservons
+l'hypothèse d'absence d'autocorrélation et nous en déduisons que les
+résidus ne sont pas autocorrélés au seuil de 0,1\%.
+
+Nous observons que les résidus sont globalement répartis le long de la
+droite. Néanmoins nous en déduisons que les résidus ne suivent pas une
+loi normale d'après le graphique représentant la densité des résidus.
+
+Pour \(BP\), nous avons moins de 0,1\% de chance de se tomper en
+rejetant l'hypothèse d'homoscédasticité. Par conséquent, nous rejetons
+l'hypothèse d'homoscédasticité et nous en déduisons que les résidus sont
+hétéroscédastiques au seuil de 0,1\%.
+
+Nous observons l'existence de résidus qui ne sont globalement pas
+linéaires et qui tendent vers la distance de Cook. Nous en déduisons
+que, dans une moindre mesure, les logement 18483, 9255, 7253, 3915 et
+3736 ont un résidu aberrant.
+
+Les hypothèses nécessaires des résultats et des résidus sont avérés au
+seuil de 0,1\%. Notre constante, notre coefficient, notre
+significativité, notre linéarité des résidus, notre absence
+d'autocorrélation des résidus et notre appartenance à une loi normale
+des résidus sont avérés au seuil de 0,1\%. L'hypothèse
+d'hétéroscédasticité ne pose pas de problème car le prix des logements
+et la variance du prix des logements ne sont pas homogènes.
+
+En conclusion, nous avons 0,1\% de chance de se tromper en affirmant que
+plus les logements sont récents et plus le prix de ces derniers est
+élevé selon la relation \(\mathcal{M}_{4}\).
+
+\begin{center}\includegraphics{E2-L3S2--1-_files/figure-latex/data.figure14-1} \end{center}
+
+\newpage
+
+\hypertarget{mathcala_6-le-prix-dun-logement-dans-la-ville-de-seattle-dans-luxe9tat-de-washington-aux-uxe9tats-unis}{%
+\section{\texorpdfstring{\(\mathcal{A}_{6}\) : le prix d'un logement
+dans la ville de Seattle dans l'État de Washington aux
+États-Unis}{\textbackslash mathcal\{A\}\_\{6\} : le prix d'un logement dans la ville de Seattle dans l'État de Washington aux États-Unis}}\label{mathcala_6-le-prix-dun-logement-dans-la-ville-de-seattle-dans-luxe9tat-de-washington-aux-uxe9tats-unis}}
+
+Nous allons segmenter la base de données \texttt{BDD\_data.csv} en ne
+prenant en compte que les logements coûtant moins de 645 000 dollars.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{data.analyse6 <-}\StringTok{ }\NormalTok{data[ data}\OperatorTok{$}\NormalTok{price }\OperatorTok{<=}\StringTok{ }\DecValTok{645000}\NormalTok{, ]}
+\end{Highlighting}
+\end{Shaded}
+
+\[\mathcal{A}_{6}=\{\mathcal{M}_{1}\}\]
+
+\begin{table}[!htbp] \centering 
+  \caption{Régressions linéaires de l'analyse 6 :} 
+  \label{} 
+\small 
+\begin{tabular}{@{\extracolsep{1pt}}lcc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{2}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-3} 
+\\[-1.8ex] & \multicolumn{2}{c}{log(price)} \\ 
+\\[-1.8ex] & (1) & (2)\\ 
+\hline \\[-1.8ex] 
+ log(sqft\_living) & 0.829$^{***}$ & 0.460$^{***}$ \\ 
+  & (0.010) & (0.010) \\ 
+  bedrooms & $-$0.089$^{***}$ & $-$0.055$^{***}$ \\ 
+  & (0.003) & (0.003) \\ 
+  bathrooms & 0.137$^{***}$ & 0.089$^{***}$ \\ 
+  & (0.006) & (0.006) \\ 
+  floors & 0.134$^{***}$ & 0.109$^{***}$ \\ 
+  & (0.006) & (0.006) \\ 
+  condition2 & $-$0.002 & 0.064 \\ 
+  & (0.071) & (0.062) \\ 
+  condition3 & 0.204$^{***}$ & 0.297$^{***}$ \\ 
+  & (0.066) & (0.057) \\ 
+  condition4 & 0.210$^{***}$ & 0.290$^{***}$ \\ 
+  & (0.066) & (0.057) \\ 
+  condition5 & 0.259$^{***}$ & 0.324$^{***}$ \\ 
+  & (0.066) & (0.058) \\ 
+  life\_built & 0.005$^{***}$ & 0.003$^{***}$ \\ 
+  & (0.0001) & (0.0001) \\ 
+  Constant & 6.160$^{***}$ & 8.823$^{***}$ \\ 
+  & (0.091) & (0.087) \\ 
+ \hline \\[-1.8ex] 
+Observations & 21,613 & 16,240 \\ 
+R$^{2}$ & 0.532 & 0.273 \\ 
+Adjusted R$^{2}$ & 0.532 & 0.273 \\ 
+Residual Std. Error & 0.360 (df = 21603) & 0.301 (df = 16230) \\ 
+F Statistic & 2,730.721$^{***}$ (df = 9; 21603) & 678.560$^{***}$ (df = 9; 16230) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{2}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table}
+
+Les régressions linéaires de l'analyse 6 ne sont pas plus intéressantes
+que les régressions linéaires des analyses 1, 2, 3, 4 et 5.
+
+\hypertarget{synthuxe8se}{%
+\section{Synthèse}\label{synthuxe8se}}
+
+Vous devez vous référer à l'annexe
+\texttt{DevoirEconometrieLubinVialatteAnnexe\ (2).pdf}.
+
+\hypertarget{tools}{%
+\section{\texorpdfstring{\texttt{tools}}{tools}}\label{tools}}
+
+Nous nous sommes servis de ces \texttt{tools} :
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{tool.table <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{( b, c, d )\{}
+\NormalTok{  a <-}\StringTok{ }\NormalTok{b }\OperatorTok{%>%}
+\StringTok{    }\KeywordTok{kable}\NormalTok{( }\DataTypeTok{caption =}\NormalTok{ c,}
+           \DataTypeTok{digits =} \DecValTok{3}\NormalTok{,}
+           \DataTypeTok{booktabs =}\NormalTok{ T ) }\OperatorTok{%>%}
+\StringTok{    }\KeywordTok{kable_styling}\NormalTok{( }\DataTypeTok{full_width =}\NormalTok{ F,}
+                   \DataTypeTok{position =} \StringTok{"center"}\NormalTok{,}
+                   \DataTypeTok{latex_options =} \KeywordTok{c}\NormalTok{( }\StringTok{"striped"}\NormalTok{,}
+                                      \StringTok{"condensed"}\NormalTok{,}
+                                      \StringTok{"hold_position"}\NormalTok{,}
+\NormalTok{                                      d ) )}
+  \KeywordTok{return}\NormalTok{( a )}
+\NormalTok{\}}\CommentTok{# pour les tableaux,}
+\CommentTok{# a = ( b = data, c = caption, d = "scale_down" ),}
+
+\NormalTok{tool.summary <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{( b )\{}
+\NormalTok{  a <-}\StringTok{ }\KeywordTok{c}\NormalTok{( }\KeywordTok{mean}\NormalTok{( b,}
+                \DataTypeTok{na.rm =}\NormalTok{ T ),}
+          \KeywordTok{sd}\NormalTok{( b,}
+              \DataTypeTok{na.rm =}\NormalTok{ T ),}
+          \KeywordTok{quantile}\NormalTok{( b,}
+                    \DataTypeTok{na.rm =}\NormalTok{ T ) )}
+\NormalTok{  a <-}\StringTok{ }\KeywordTok{round}\NormalTok{( a,}
+              \DecValTok{3}\NormalTok{ )}
+  \KeywordTok{names}\NormalTok{( a ) <-}\StringTok{ }\KeywordTok{c}\NormalTok{( }\StringTok{"Moyenne"}\NormalTok{,}
+                   \StringTok{"Ecart-type"}\NormalTok{,}
+                   \StringTok{"Minimum"}\NormalTok{,}
+                   \StringTok{"Q1"}\NormalTok{,}
+                   \StringTok{"Q2"}\NormalTok{,}
+                   \StringTok{"Q3"}\NormalTok{,}
+                   \StringTok{"Maximum"}\NormalTok{ )}
+  \KeywordTok{return}\NormalTok{( a )}
+\NormalTok{\}}\CommentTok{# pour les résumés des variables,}
+\CommentTok{# a = ( b = data ),}
+
+\NormalTok{tool.durbin <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{( b )\{}
+\NormalTok{  test1 <-}\StringTok{ }\KeywordTok{dwtest}\NormalTok{( b )}
+\NormalTok{  a <-}\StringTok{ }\KeywordTok{c}\NormalTok{( test1}\OperatorTok{$}\NormalTok{p.value,}
+\NormalTok{          test1}\OperatorTok{$}\NormalTok{statistic )}
+\NormalTok{  a <-}\StringTok{ }\KeywordTok{round}\NormalTok{( a,}
+              \DecValTok{3}\NormalTok{ )}
+  \KeywordTok{names}\NormalTok{( a ) <-}\StringTok{ }\KeywordTok{c}\NormalTok{( }\StringTok{"p.value"}\NormalTok{,}
+                   \StringTok{"DW"}\NormalTok{ )}
+  \KeywordTok{return}\NormalTok{ ( a )}
+\NormalTok{\}}\CommentTok{# pour les tests de Durbin-Watson,}
+\CommentTok{# a = ( b = data ),}
+
+\NormalTok{tool.shapiro <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{( b )\{}
+\NormalTok{  test1 <-}\StringTok{ }\KeywordTok{shapiro.test}\NormalTok{( b )}
+\NormalTok{  a <-}\StringTok{ }\KeywordTok{c}\NormalTok{( test1}\OperatorTok{$}\NormalTok{p.value,}
+\NormalTok{          test1}\OperatorTok{$}\NormalTok{statistic )}
+\NormalTok{  a <-}\StringTok{ }\KeywordTok{round}\NormalTok{( a,}
+              \DecValTok{3}\NormalTok{ )}
+  \KeywordTok{names}\NormalTok{( a ) <-}\StringTok{ }\KeywordTok{c}\NormalTok{( }\StringTok{"p.value"}\NormalTok{,}
+                   \StringTok{"W"}\NormalTok{ )}
+  \KeywordTok{return}\NormalTok{( a )}
+\NormalTok{\}}\CommentTok{# pour les tests de Shapiro-Wilk,}
+\CommentTok{# a = ( b = data ),}
+
+\NormalTok{tool.breusch <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{( b )\{}
+\NormalTok{  test1 <-}\StringTok{ }\KeywordTok{bptest}\NormalTok{( b )}
+\NormalTok{  a <-}\StringTok{ }\KeywordTok{c}\NormalTok{( test1}\OperatorTok{$}\NormalTok{p.value,}
+\NormalTok{          test1}\OperatorTok{$}\NormalTok{statistic )}
+\NormalTok{  a <-}\StringTok{ }\KeywordTok{round}\NormalTok{( a,}
+              \DecValTok{3}\NormalTok{ )}
+  \KeywordTok{names}\NormalTok{( a ) <-}\StringTok{ }\KeywordTok{c}\NormalTok{( }\StringTok{"p.value"}\NormalTok{,}
+                   \StringTok{"BP"}\NormalTok{ )}
+  \KeywordTok{return}\NormalTok{ ( a )}
+\NormalTok{\}}\CommentTok{# pour les tests de Breusch-Pagan,}
+\CommentTok{# a = ( b = data ),}
+
+\NormalTok{tool.harrison <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{( b )\{}
+\NormalTok{  test1 <-}\StringTok{ }\KeywordTok{hmctest}\NormalTok{( b )}
+\NormalTok{  a <-}\StringTok{ }\KeywordTok{c}\NormalTok{( test1}\OperatorTok{$}\NormalTok{p.value,}
+\NormalTok{          test1}\OperatorTok{$}\NormalTok{statistic )}
+\NormalTok{  a <-}\StringTok{ }\KeywordTok{round}\NormalTok{( a,}
+              \DecValTok{3}\NormalTok{ )}
+  \KeywordTok{names}\NormalTok{( a ) <-}\StringTok{ }\KeywordTok{c}\NormalTok{( }\StringTok{"p.value"}\NormalTok{,}
+                   \StringTok{"HMC"}\NormalTok{ )}
+  \KeywordTok{return}\NormalTok{ ( a )}
+\NormalTok{\}}\CommentTok{# pour les tests de Harrison-McCabe,}
+\CommentTok{# a = ( b = data ),}
+
+\NormalTok{tool.student <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{( b, c )\{}
+\NormalTok{ test1 <-}\StringTok{ }\KeywordTok{var.test}\NormalTok{( b }\OperatorTok{~}\StringTok{ }\NormalTok{c )}
+\NormalTok{ test2 <-}\StringTok{ }\KeywordTok{t.test}\NormalTok{( b }\OperatorTok{~}\StringTok{ }\NormalTok{c,}
+                  \DataTypeTok{equal =}\NormalTok{ test1}\OperatorTok{$}\NormalTok{p.value }\OperatorTok{>}\StringTok{ }\FloatTok{0.05}\NormalTok{ )}
+\NormalTok{ a <-}\StringTok{ }\KeywordTok{c}\NormalTok{( }\KeywordTok{table}\NormalTok{( c[ }\OperatorTok{!}\KeywordTok{is.na}\NormalTok{( b ) ] ),}
+         \KeywordTok{ifelse}\NormalTok{( test2}\OperatorTok{$}\NormalTok{p.value }\OperatorTok{>}\StringTok{ }\FloatTok{0.05}\NormalTok{,}
+                 \StringTok{"Oui"}\NormalTok{,}
+                 \StringTok{"Non"}\NormalTok{ ),}
+         \KeywordTok{round}\NormalTok{( }\KeywordTok{c}\NormalTok{( test2}\OperatorTok{$}\NormalTok{estimate,}
+\NormalTok{                   test2}\OperatorTok{$}\NormalTok{p.value ),}
+                \DecValTok{3}\NormalTok{ ) )}
+ \KeywordTok{names}\NormalTok{( a ) <-}\StringTok{ }\KeywordTok{c}\NormalTok{( }\KeywordTok{names}\NormalTok{( }\KeywordTok{table}\NormalTok{( c[ }\OperatorTok{!}\KeywordTok{is.na}\NormalTok{(b) ] ) ),}
+                  \StringTok{"var.equal"}\NormalTok{,}
+                  \KeywordTok{names}\NormalTok{( test2}\OperatorTok{$}\NormalTok{estimate ),}
+                  \StringTok{"p.value"}\NormalTok{ )}
+ \KeywordTok{return}\NormalTok{( a )}
+\NormalTok{\}}\CommentTok{# pour les tests de Student de comparaison des moyennes et des variances,}
+\CommentTok{# a = ( b = data1, c = data2 ),}
+
+\NormalTok{tool.chi2 <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{( b, c )\{}
+\NormalTok{  test1 <-}\StringTok{ }\KeywordTok{chisq.test}\NormalTok{( b,}
+\NormalTok{                       c )}
+\NormalTok{  a <-}\StringTok{ }\KeywordTok{c}\NormalTok{( }\KeywordTok{min}\NormalTok{( test1}\OperatorTok{$}\NormalTok{expected ),}
+\NormalTok{          test1}\OperatorTok{$}\NormalTok{p.value )}
+\NormalTok{  a <-}\StringTok{ }\KeywordTok{round}\NormalTok{( a,}
+              \DecValTok{3}\NormalTok{ )}
+  \KeywordTok{names}\NormalTok{( a ) <-}\StringTok{ }\KeywordTok{c}\NormalTok{( }\StringTok{"Eff_théorique_min"}\NormalTok{,}
+                   \StringTok{"p-value"}\NormalTok{ )}
+  \KeywordTok{return}\NormalTok{( a )}
+\NormalTok{\}}\CommentTok{# pour les tests du Chi 2 d'indépendance des variables,}
+\CommentTok{# a = ( b = data1, c = data2 ),}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{packages}{%
+\section{\texorpdfstring{\texttt{packages}}{packages}}\label{packages}}
+
+Nous nous sommes servis de ces \texttt{packages} :
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{( readxl )}\CommentTok{# pour la base de données,}
+\KeywordTok{library}\NormalTok{( dplyr )}\CommentTok{# pour la syntaxe,}
+\KeywordTok{library}\NormalTok{( tidyverse )}
+\KeywordTok{library}\NormalTok{( forcats )}\CommentTok{# pour les vecteurs,}
+\KeywordTok{library}\NormalTok{( lmtest )}\CommentTok{# pour les tests,}
+\KeywordTok{library}\NormalTok{( performance )}
+\KeywordTok{library}\NormalTok{( see )}\CommentTok{# pour le package performance,}
+\KeywordTok{library}\NormalTok{( qqplotr )}\CommentTok{# pour le package performance,}
+\KeywordTok{library}\NormalTok{( maps )}\CommentTok{# pour les cartes,}
+\KeywordTok{library}\NormalTok{( mapdata )}\CommentTok{# pour les cartes,}
+\KeywordTok{library}\NormalTok{( stringr )}
+\KeywordTok{library}\NormalTok{( viridis )}
+
+\KeywordTok{library}\NormalTok{( plm )}\CommentTok{# pour les régressions,}
+\KeywordTok{library}\NormalTok{( car )}\CommentTok{# Pour les régressions,}
+\KeywordTok{library}\NormalTok{( carData )}\CommentTok{# Pour les régressions,}
+\KeywordTok{library}\NormalTok{( stargazer )}\CommentTok{# pour les régressions,}
+\KeywordTok{library}\NormalTok{( lmtest )}\CommentTok{# pour les régressions,}
+\KeywordTok{library}\NormalTok{( statsr )}\CommentTok{# pour les régressions,}
+\CommentTok{# library( summarytools )# pour les régressions,}
+
+\KeywordTok{library}\NormalTok{( printr )}\CommentTok{# pour les tableaux,}
+\KeywordTok{library}\NormalTok{( knitr )}\CommentTok{# pour les tableaux,}
+\KeywordTok{library}\NormalTok{( kableExtra )}\CommentTok{# pour les tableaux,}
+\KeywordTok{library}\NormalTok{( modelsummary )}\CommentTok{# pour les tableaux,}
+\KeywordTok{library}\NormalTok{( gtsummary )}\CommentTok{# pour les tableaux,}
+
+\CommentTok{# library( ggplot1 )# pour les graphiques,}
+\KeywordTok{library}\NormalTok{( ggplot2 )}\CommentTok{# pour les graphiques,}
+\KeywordTok{library}\NormalTok{( ggcorrplot )}\CommentTok{# pour les graphiques,}
+\KeywordTok{library}\NormalTok{( ggfortify )}\CommentTok{# pour les graphiques,}
+\KeywordTok{library}\NormalTok{( ggpubr )}\CommentTok{# pour les graphiques,}
+\KeywordTok{library}\NormalTok{( ggrepel )}\CommentTok{# pour les graphiques,}
+\KeywordTok{library}\NormalTok{( ggridges )}\CommentTok{# pour les graphiques,}
+\KeywordTok{library}\NormalTok{( ggsci )}\CommentTok{# pour les graphiques,}
+\KeywordTok{library}\NormalTok{( ggsignif )}\CommentTok{# pour les graphiques,}
+\end{Highlighting}
+\end{Shaded}
+
+\end{document}
